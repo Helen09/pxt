@@ -1,4 +1,4 @@
-import {By} from 'selenium-webdriver';
+import { By } from 'selenium-webdriver';
 
 export class DomObject {
 
@@ -20,18 +20,18 @@ export class DomObject {
         return true;
     }
 
-    findBy(criteria){
+    findBy(criteria) {
         if (typeof criteria === 'string') {
             return By.css(criteria);
         }
-        return criteria
+        return criteria;
     }
 
     async sendKeys(criteria, keys) {
 
         let element = await driver.findElement(this.findBy(criteria));
         await element.sendKeys(keys);
-        
+
         return true;
     }
 
@@ -39,5 +39,12 @@ export class DomObject {
     async click(...findBys) {
         let i = await this.actionForAll('click', findBys);
         return i;
+    }
+
+
+    async getText(criteria) {
+        let element = await driver.findElement(this.findBy(criteria));
+        await element.getText();
+        return true;
     }
 }

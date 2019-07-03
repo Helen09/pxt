@@ -1,8 +1,10 @@
-import {website} from "./lib/website";
+import { website } from "./lib/website";
 import webdriver from 'selenium-webdriver';
-import {chrome} from 'selenium-webdriver/chrome';
+import { chrome } from 'selenium-webdriver/chrome';
 
-import {newProjectPage} from './new-project'
+
+import { newProjectPage } from './new-project';
+import { shareProjectPage } from './share-project';
 
 describe('Micro:bit Test', function () {
     before(async () => {
@@ -13,4 +15,5 @@ describe('Micro:bit Test', function () {
     });
 
     newProjectPage.test();
-})
+    //shareProjectPage.test();
+});
