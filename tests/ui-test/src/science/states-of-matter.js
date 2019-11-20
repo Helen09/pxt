@@ -15,8 +15,6 @@ class StatesOfMatter extends DomObject {
         assert.equal(headerTitle, 'States of Matter');
         console.debug(`The header of the new page is "${headerTitle}"`);
         
-        // await this.click(commonActions.getStartButton);
-
         await this.click(commonActions.playButton);
 
         await this.switchToIframe('.embed iframe');

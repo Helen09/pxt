@@ -22,10 +22,10 @@ class TimingGates extends DomObject {
     }
 
     test() {
+
         it('Start learning the "Timing Gates"', async () => {
             return await this.timingGates();
         });
     }
-
 }
 export let timingGates = new TimingGates();

@@ -22,6 +22,7 @@ class SoilMoisture extends DomObject {
     }
 
     test() {
+        
         it('Start learning the "Soil Moisture"', async () => {
             return await this.soilMoisture();
         });

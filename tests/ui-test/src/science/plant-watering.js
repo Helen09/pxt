@@ -15,8 +15,6 @@ class PlantWatering extends DomObject {
         assert.equal(headerTitle, 'Plant Watering');
         console.debug(`The header of the new page is "${headerTitle}"`);
         
-        // await this.click(commonActions.getStartButton);
-
         await this.click(commonActions.playButton);
 
         await this.switchToIframe('.embed iframe');
@@ -34,6 +32,7 @@ class PlantWatering extends DomObject {
     }
 
     test() {
+        
         it('Start learning the "Plant Watering"', async () => {
             return await this.plantWatering();
         });
