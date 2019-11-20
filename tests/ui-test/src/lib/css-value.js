@@ -223,6 +223,14 @@ exports.tools = {
     openExample:'.actions .positive'
 }
 
+exports.turtle = {
+    square:'[aria-label="Square"]',
+    spiral:'[aria-label="Spiral"]',
+    scanner:'[aria-label="Scanner"]',
+    titleOfSpiral:'#turtle-spiral',
+    titleOfScanner:'#turtle-scanner',
+
+}
 exports.commonActions = {
     startTutorial: '.actions button',
     showInstructions: '.actions .positive',
