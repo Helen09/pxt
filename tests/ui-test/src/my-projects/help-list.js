@@ -32,6 +32,8 @@ class GetHelpList extends DomObject {
 
         await this.click(helpOfProject.openLinkButton);
 
+        await driver.sleep(2000);
+
         await this.switchToNewWindow();
 
         let newPageTitle = await this.getText(helpOfProject.titleOfReferencePage);
@@ -44,7 +46,7 @@ class GetHelpList extends DomObject {
 
         await this.click(helpOfProject.helpButton, helpOfProject.blocks);
 
-        await this.switchToIframe(helpOfProject.iframeOfSideDocs);
+        await this.switchToIframe(commonActions.idOfIframe);
 
         let blocksTitle = await this.getText(helpOfProject.titleOfBlocksPage);
 
@@ -58,7 +60,7 @@ class GetHelpList extends DomObject {
 
         await this.click(helpOfProject.helpButton, helpOfProject.javascript);
 
-        await this.switchToIframe(helpOfProject.iframeOfSideDocs);
+        await this.switchToIframe(commonActions.idOfIframe);
 
         let javascriptTitle = await this.getText(helpOfProject.titleOfJavaScriptPage);
 
@@ -70,7 +72,7 @@ class GetHelpList extends DomObject {
 
         await this.click(helpOfProject.helpButton, helpOfProject.hardware);
 
-        await this.switchToIframe(helpOfProject.iframeOfSideDocs);
+        await this.switchToIframe(commonActions.idOfIframe);
 
         await this.click(helpOfProject.goBackButton);
 
@@ -95,7 +97,7 @@ class GetHelpList extends DomObject {
     }
 
     test() {
-        it('Get Help List', async () => {
+        it('Start test GetHelpList()', async () => {
             return await this.helpList();
         });
     }
