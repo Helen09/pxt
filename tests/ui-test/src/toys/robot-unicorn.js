@@ -15,8 +15,6 @@ class RobotUnicorn extends DomObject {
         assert.equal(headerTitle, 'Robot Unicorn');
         console.debug(`The header of the new page is "${headerTitle}"`);
         
-        // await this.click(commonActions.getStartButton);
-
         await this.closeCurrentWindow();
         
         await this.click(commonActions.closeButton);

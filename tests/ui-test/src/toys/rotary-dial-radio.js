@@ -15,8 +15,6 @@ class RotaryDialRadio extends DomObject {
         assert.equal(headerTitle, 'Rotary Dial Radio');
         console.debug(`The header of the new page is "${headerTitle}"`);
         
-        // await this.click(commonActions.getStartButton);
-
         await this.closeCurrentWindow();
         
         await this.click(commonActions.closeButton);

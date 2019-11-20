@@ -15,8 +15,6 @@ class Inchworm extends DomObject {
         assert.equal(headerTitle, 'Inchworm');
         console.debug(`The header of the new page is "${headerTitle}"`);
         
-        // await this.click(commonActions.getStartButton);
-
         await this.click(commonActions.playButton);
 
         await this.switchToIframe('.embed iframe');
