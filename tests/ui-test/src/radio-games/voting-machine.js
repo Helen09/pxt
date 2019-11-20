@@ -32,10 +32,10 @@ class VotingMachine extends DomObject {
     }
 
     test() {
+
         it('Start learning the "Voting Machine"', async () => {
             return await this.votingMachine();
         });
     }
-
 }
 export let votingMachine = new VotingMachine();

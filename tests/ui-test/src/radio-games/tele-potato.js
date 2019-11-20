@@ -10,6 +10,7 @@ class TelePotato extends DomObject {
             radioGames.telePotato, commonActions.showInstructions);
 
         await driver.sleep(3000);
+
         await this.switchToIframe(commonActions.idOfIframe);
 
         try {
@@ -30,10 +31,10 @@ class TelePotato extends DomObject {
     }
 
     test() {
+        
         it('Start learning the Tele-Potato', async () => {
             return await this.telePotato();
         });
     }
-
 }
 export let telePotato = new TelePotato();
