@@ -14,15 +14,16 @@ class RadioBridge extends DomObject {
         console.log(`The project name is "${projectName}"`);
         
         await this.catchScreenShot('ExampleOfRadioBridge');
+
         await this.click(commonActions.microbitLogo);
 
     }
 
     test() {
+
         it('Start learning the "Radio Bridge"', async () => {
             return await this.radioBridge();
         });
     }
-
 }
 export let radioBridge = new RadioBridge();

@@ -24,6 +24,7 @@ class LightLevelMeter extends DomObject {
     }
 
     test() {
+        
         it('Start learning the "Light Level Meter"', async () => {
             return await this.lightLevelMeter();
         });

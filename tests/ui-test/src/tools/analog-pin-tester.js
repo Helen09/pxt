@@ -24,10 +24,10 @@ class AnalogPinTester extends DomObject {
     }
 
     test() {
+
         it('Start learning the "Analog Pin Tester"', async () => {
             return await this.analogPinTester();
         });
     }
-
 }
 export let analogPinTester = new AnalogPinTester();

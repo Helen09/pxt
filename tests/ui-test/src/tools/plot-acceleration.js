@@ -24,6 +24,7 @@ class PlotAcceleration extends DomObject {
     }
 
     test() {
+        
         it('Start learning the "Plot Acceleration"', async () => {
             return await this.plotAcceleration();
         });

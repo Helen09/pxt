@@ -24,6 +24,7 @@ class ServoCalibrator extends DomObject {
     }
 
     test() {
+        
         it('Start learning the "Servo Calibrator"', async () => {
             return await this.servoCalibrator();
         });
