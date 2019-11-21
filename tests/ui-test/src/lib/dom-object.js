@@ -10,9 +10,9 @@ export class DomObject {
         for (let criteria of findBys) {
             if (criteria) {
                 // console.debug(`Try to click the element by criteria: ${criteria}`);
-
+                let findBy = this.findBy(criteria);
                 //wait until the element can be located
-                let element = await driver.wait(until.elementLocated(this.findBy(criteria)));
+                let element = await this.waitforElementLocated(findBy);
 
                 //Sleep for 2 seconds to make sure the element's state is stable for interactions
                 await driver.sleep(2000);
@@ -21,6 +21,12 @@ export class DomObject {
             }
         }
         return true;
+    }
+    async waitforElementLocated(criteria) {
+        let findBy = this.findBy(criteria);
+        let element = await driver.wait(until.elementLocated(findBy));
+        return element;
+
     }
 
     findBy(criteria) {
@@ -42,22 +48,22 @@ export class DomObject {
     }
 
     async getRect(criteria) {
-        let element = await driver.wait(until.elementLocated(this.findBy(criteria)), 10000);
+        let element = await this.waitforElementLocated(this.findBy(criteria), 10000);
         return element.getRect();
     }
 
     async contextClick(criteria) {
         let actions = driver.actions();
 
-        let element = await driver.wait(until.elementLocated(this.findBy(criteria)), 10000);
+        let element = await this.waitforElementLocated(this.findBy(criteria), 10000);
         return actions.contextClick(element).perform();
     }
 
     async dragAndDropByElement(criteria, criteria2) {
         let actions = driver.actions();
 
-        let origin = await driver.wait(until.elementLocated(this.findBy(criteria)), 10000);
-        let goal = await driver.wait(until.elementLocated(this.findBy(criteria2)), 10000);
+        let origin = await this.waitforElementLocated(this.findBy(criteria), 10000);
+        let goal = await this.waitforElementLocated(this.findBy(criteria), 10000);
 
         return actions.dragAndDrop(origin, goal).perform();
     }
@@ -65,7 +71,7 @@ export class DomObject {
     async dragAndDropByCoordinate(criteria, xoffset, yoffset) {
         let actions = driver.actions();
 
-        let origin = await driver.wait(until.elementLocated(this.findBy(criteria)), 10000);
+        let origin = await this.waitforElementLocated(this.findBy(criteria), 10000);
         return actions.dragAndDrop(origin, { x: xoffset, y: yoffset }).perform();
     }
 
@@ -87,20 +93,25 @@ export class DomObject {
     }
 
     async closeCurrentWindow() {
-        let handles = await driver.getAllWindowHandles();
-        await driver.close();
-        await driver.switchTo().window(handles[0]);
-        return true;
+        let oldWindow = "";
+        await driver.getAllWindowHandles().then(function(handles){
+            oldWindow = handles[0];
+            driver.close();
+            driver.switchTo().window(oldWindow);
+        });
     }
 
     async switchToNewWindow() {
-        let handles = await driver.getAllWindowHandles();
-        return driver.switchTo().window(handles[1]);
+        let newWindow = "";
+        await driver.getAllWindowHandles().then(function(handles){
+            newWindow = handles[1]
+            driver.switchTo().window(newWindow);
+        });
     }
 
 
     async switchToIframe(criteria) {
-        let element = await driver.wait(until.elementLocated(this.findBy(criteria)), 10000);
+        let element = await this.waitforElementLocated(this.findBy(criteria), 10000);
         let newIframe = await driver.switchTo().frame(element);
         await driver.sleep(5000);
         return newIframe;
@@ -112,18 +123,18 @@ export class DomObject {
     }
 
     async getText(criteria) {
-        let element = await driver.wait(until.elementLocated(this.findBy(criteria)), 10000);
+        let element = await this.waitforElementLocated(this.findBy(criteria), 10000);
         return element.getText();
     }
 
     async getAttribute(criteria, attributeName) {
-        let element = await driver.wait(until.elementLocated(this.findBy(criteria)), 10000);
+        let element = await this.waitforElementLocated(this.findBy(criteria), 10000);
         return element.getAttribute(attributeName);
     }
 
     async sendKeys(criteria, keys) {
 
-        let element = await driver.wait(until.elementLocated(this.findBy(criteria)), 10000);
+        let element = await this.waitforElementLocated(this.findBy(criteria), 10000);
 
         if (element !== null) {
 
