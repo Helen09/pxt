@@ -32,8 +32,6 @@ class GetHelpList extends DomObject {
 
         await this.click(helpOfProject.openLinkButton);
 
-        await driver.sleep(2000);
-
         await this.switchToNewWindow();
 
         let newPageTitle = await this.getText(helpOfProject.titleOfReferencePage);
