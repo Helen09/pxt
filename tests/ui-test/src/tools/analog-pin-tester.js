@@ -14,11 +14,7 @@ class AnalogPinTester extends DomObject {
         let headerTitle = await this.getText(tools.titleOfAnalogPinTester);
         assert.equal(headerTitle, 'Analog Pin Tester');
         console.debug(`The header of the sidedocs is "${headerTitle}"`);
-        
-        await this.click(commonActions.openInNewTab);
 
-        await this.closeCurrentWindow();
-        
         await this.click(commonActions.microbitLogo);
 
     }

@@ -16,12 +16,6 @@ class StepCounter extends DomObject {
         console.debug(`The header of the sidedocs is "${headerTitle}"`);
         
         await this.switchToDefaultFrame();
-
-        await this.click(commonActions.openInNewTab);
-
-        await this.switchToNewWindow();
-
-        await this.closeCurrentWindow();
         
         await this.click(commonActions.microbitLogo);
 
