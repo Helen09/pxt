@@ -15,6 +15,7 @@ class ServoCalibrator extends DomObject {
         assert.equal(headerTitle, 'Servo Calibrator');
         console.debug(`The header of the sidedocs is "${headerTitle}"`);
         
+        await this.switchToDefaultFrame();
         await this.click(commonActions.microbitLogo);
 
     }

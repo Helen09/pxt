@@ -15,6 +15,8 @@ class PlotAcceleration extends DomObject {
         assert.equal(headerTitle, 'Plot Acceleration');
         console.debug(`The header of the sidedocs is "${headerTitle}"`);
         
+        await this.switchToDefaultFrame();
+
         await this.click(commonActions.microbitLogo);
 
     }
