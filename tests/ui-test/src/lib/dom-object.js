@@ -98,6 +98,8 @@ export class DomObject {
             oldWindow = handles[0];
             driver.close();
             driver.switchTo().window(oldWindow);
+        return true;
+
         });
     }
 
@@ -106,11 +108,13 @@ export class DomObject {
         await driver.getAllWindowHandles().then(function(handles){
             newWindow = handles[1]
             driver.switchTo().window(newWindow);
+        return true;
         });
     }
 
 
     async switchToIframe(criteria) {
+        await driver.sleep(2000);
         let element = await this.waitforElementLocated(this.findBy(criteria), 10000);
         let newIframe = await driver.switchTo().frame(element);
         await driver.sleep(5000);

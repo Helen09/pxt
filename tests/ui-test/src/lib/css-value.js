@@ -34,11 +34,7 @@ exports.helpOfProject = {
     buy: '[aria-label="Dropdown menu Help"] [title="Buy"]',
     collapseButton: '#sidedocstoggle',
     goBackButton: '#sidedocs-back-button',
-    titleAfterGoBack: '.ui.text h1',
     openLinkButton: '#sidedocsbar',
-    titleOfBlocksPage: '#blocks-language',
-    titleOfReferencePage: '#reference',
-    titleOfJavaScriptPage: '#javascript',
     headerTitleOfSupport:'h2.hide-in-mobile',
     headerTitleOfBuy:'.alpha'
 }
@@ -51,14 +47,12 @@ exports.moreOfProject = {
     saveButtonInSettings: '.ui.button.green',
     editSettingsAsTextButton: '.field .ui.button:nth-child(2)',
     extensionsOption: '[title="Extensions"]',
-    FirstExtensionTitle: '.ui.card.link:nth-child(1) .header',
+    firstExtensionTitle: '.ui.card.link:nth-child(1) .header',
     goBackButtonInExtensions: '.header-close [title="Go back"]',
     deleteOption: '[title="Delete Project"]',
-    titleOfDeleteAlert: '.header-title',
     cancelButton: 'button.cancel',
     reportAbuse: '[title="Report Abuse..."]',
     languageOption: '[title="Language"]',
-    headerTitle: '.header-title',
     closeButton: '.closeIcon',
     turnOnTheHighContrast: '[title="More..."] .ui:nth-child(8)',
     turnOnTheGreenScreen: '[title="Green Screen On"]',
@@ -98,7 +92,6 @@ exports.dragBlocks = {
     textBox: 'body textarea',
     commentDeleteButton: 'g.blocklyCommentDeleteIcon',
     helpOptionOfInsertBlock: '.goog-menuitem:nth-child(4)',
-    titleOfInsertBlock: '#show-string',
     collapseButton: '[id="sidedocstoggle"]',
     deleteInsertBlock: '.goog-menuitem:nth-child(3)',
     fullScreenButton: '.fullscreen-button',
@@ -123,12 +116,7 @@ exports.games = {
     snapTheDot: '[aria-label="Snap the dot"]',
     salute: '[aria-label="Salute!"]',
     karelTheLed: '[aria-label="Karel the LED"]',
-    crashyBird: '[aria-label="Crashy bird"]',
-    titleOfReactionTime: '#reaction-time',
-    titleOfMagic: '#magic-button-trick',
-    titleOfSalute: '#salute-',
-    titleOfKarelTheLed:'#karel-the-led',
-    titleOfCrashyBird:'#crashy-bird',
+    crashyBird: '[aria-label="Crashy bird"]'
 }
 
 exports.radioGames = {
@@ -142,17 +130,7 @@ exports.radioGames = {
     rockPaperScissorsTeams:'[aria-label="Rock Paper Scissors Teams"]',
     microCoin:'[aria-label="Micro:Coin"]',
     infection:'[aria-label="Infection"]',
-    bestFriends:'[aria-label="Best Friends"]',
-    titleOfMoodRadio:'#mood-radio',
-    titleOfTelePotato:'#tele-potato',
-    titleOfFireflies:'#fireflies',
-    titleOfHotOrCold:'#hot-or-cold',
-    titleOfRedLightGreenLight:'#red-light-green-light',
-    titleOfVotingMachine:'#voting-machine',
-    titleOfRockPaperScissorsTeams:'#rock-paper-scissors-teams',
-    titleOfMicroCoin:'#micro-coin',
-    titleOfInfection:'#infection',
-    titleOfBestFriends:'#best-friends',
+    bestFriends:'[aria-label="Best Friends"]'
 }
     
 exports.fashion = {
@@ -161,25 +139,13 @@ exports.fashion = {
     stopWatch:'[aria-label="Stopwatch"]',
     stepCounter:'[aria-label="Step counter"]',
     ductTapeWatch:'[aria-label="Duct Tape Watch"]',
-    nameBadge:'[aria-label="Name badge"]',
-    titleOfWallet:'#wallet',
-    titleOfNewPage:'#make',
-    titleOfWatch:'#the-watch',
-    titleOfMakeWatch:'#the-watch-make',
-    titleOfStopWatch:'#stopwatch',
-    titleOfStepCounter:'#step-counter',
-    titleOfDuctTapeWatch:'#duct-tape-watch',
-    titleOfNameBadge:'#name-badge',
-
+    nameBadge:'[aria-label="Name badge"]'
 }
 
 exports.music = {
     hackYourHeadphones:'[aria-label="Hack Your Headphones"]',
     bananaKeyboard:'[aria-label="Banana Keyboard"]',
-    guitar:'[aria-label="Guitar"]',
-    titleOfHeadphones:'#hack-your-headphones',
-    titleOfkeyBoard:'#banana-keyboard',
-    titleOfGuitar:'#guitar',
+    guitar:'[aria-label="Guitar"]'
 }
 
 exports.toys = {
@@ -189,25 +155,14 @@ exports.toys = {
     milkMonster:'[aria-label="Milky Monster"]',
     railwayCrossing:'[aria-label="Railway Crossing"]',
     kitronikRCCarHack:'[aria-label="Kitronik RC Car Hack"]',
-    rotaryDialRadio:'[aria-label="Rotary Dial Radio"]',
-    titleOfInchworm:'#inchworm',
-    titleOfMilkCartonRobot:'#milk-carton-robot',
-    titleOfRobotUnicorn:'#robot-unicorn',
-    titleOfMilkMonster:'#milk-monster',
-    titleOfRailwayCrossing:'#railway-crossing',
-    titleOfRCCar:'#rc-car',
-    titleOfRotaryDialRadio:'#rotary-dial-radio',
+    rotaryDialRadio:'[aria-label="Rotary Dial Radio"]'
 }
 
 exports.science = {
     timingGates:'[aria-label="Timing Gates"]',
     soilMoisture:'[aria-label="Soil Moisture"]',
     plantWatering:'[aria-label="Plant Watering"]',
-    statesOfMatter:'[aria-label="States of Matter"]',
-    titleOfTimingGates:'#timing-gates',
-    titleOfSoilMoisture:'#soil-moisture',
-    titleOfPlantWatering:'#plant-watering',
-    titleOfStatesOfMatter:'#states-of-matter'
+    statesOfMatter:'[aria-label="States of Matter"]'
 }
 
 exports.tools = {
@@ -216,20 +171,24 @@ exports.tools = {
     analogPinTester:'[aria-label="Analog Pin Tester"]',
     servoCalibrator:'[aria-label="Servo Calibrator"]',
     radioBridge:'[aria-label="Radio Bridge"]',
-    titleOfPlotAcceleration:'#plot-acceleration',
-    titleOfLightLevelMeter:'#light-level-meter',
-    titleOfAnalogPinTester:'#analog-pin-tester',
-    titleOfServoCalibrator:'#servo-calibrator',
     openExample:'.actions .positive'
 }
 
 exports.turtle = {
     square:'[aria-label="Square"]',
     spiral:'[aria-label="Spiral"]',
-    scanner:'[aria-label="Scanner"]',
-    titleOfSpiral:'#turtle-spiral',
-    titleOfScanner:'#turtle-scanner',
+    scanner:'[aria-label="Scanner"]'
+}
 
+exports.blocksToJavaScript = {
+    helloJavaScript:'[aria-label="Hello JavaScript"]',
+    starterBlocks:'[aria-label="Starter Blocks"]',
+    writingCode:'[aria-label="Writing Code"]',
+    complexConditionals:'[aria-label="Complex Conditionals"]',
+    conditionalLoops:'[aria-label="Conditional Loops"]',
+    commandResponder:'[aria-label="Command Responder"]',
+    writingFunctions:'[aria-label="Writing Functions"]',
+    seeMoreButton:'[aria-label="Blocks To JavaScript"] [aria-label="See more"]'
 }
 exports.commonActions = {
     startTutorial: '.actions button',
@@ -252,6 +211,7 @@ exports.commonActions = {
     seeMoreOfGames: '[aria-label="Games"] [aria-label="See more"]',
     idOfIframe: '#sidedocsframe',
     getStartButton:'.docbutton',
-    openInNewTab:'#sidedocsbar'
+    openInNewTab:'#sidedocsbar',
+    titleOfNewOpenedWindow:'.ui.text h1'
 }
 

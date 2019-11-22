@@ -65,7 +65,7 @@ class BlocklyToolBox extends DomObject {
 
                 await this.switchToIframe(commonActions.idOfIframe);
 
-                let sideDocsTitle = await this.getText(dragBlocks.titleOfInsertBlock);
+                let sideDocsTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
 
                 await this.switchToDefaultFrame();
 

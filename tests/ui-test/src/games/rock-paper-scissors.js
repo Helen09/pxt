@@ -6,8 +6,7 @@ class RockPaperScissors extends DomObject {
 
     async rockPaperScissors() {
 
-        await this.click(games.rockPaperScissors, commonActions.closeButton,
-            games.rockPaperScissors, commonActions.startTutorial);
+        await this.click(games.rockPaperScissors, commonActions.startTutorial);
         
         let headerTitle = await this.getText(commonActions.headerTitle);
         assert.equal(headerTitle, 'Rock Paper Scissors');

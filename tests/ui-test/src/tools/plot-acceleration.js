@@ -6,15 +6,16 @@ class PlotAcceleration extends DomObject {
 
     async plotAcceleration() {
 
-        await this.click(tools.plotAcceleration, commonActions.closeButton,
-            tools.plotAcceleration, commonActions.showInstructions);
+        await this.click(tools.plotAcceleration, commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);
 
-        let headerTitle = await this.getText(tools.titleOfPlotAcceleration);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Plot Acceleration');
         console.debug(`The header of the sidedocs is "${headerTitle}"`);
         
+        await this.switchToDefaultFrame();
+
         await this.click(commonActions.microbitLogo);
 
     }

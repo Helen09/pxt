@@ -6,8 +6,7 @@ class Square extends DomObject {
 
     async square() {
 
-        await this.click(turtle.square, commonActions.closeButton,
-            turtle.square, commonActions.startTutorial);
+        await this.click(turtle.square, commonActions.startTutorial);
 
         let headerTitle = await this.getText(commonActions.headerTitle);
         assert.equal(headerTitle, 'Turtle Square');

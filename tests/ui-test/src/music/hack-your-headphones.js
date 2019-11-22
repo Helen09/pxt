@@ -6,12 +6,11 @@ class HackYourHeadphones extends DomObject {
 
     async hackYourHeadphones() {
 
-        await this.click(music.hackYourHeadphones, commonActions.closeButton,
-            music.hackYourHeadphones, commonActions.showInstructions);
+        await this.click(music.hackYourHeadphones, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(music.titleOfHeadphones);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Hack Your Headphones');
         console.debug(`The header of the new page is "${headerTitle}"`);
         

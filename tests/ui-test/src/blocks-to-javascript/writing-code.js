@@ -1,32 +1,29 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { turtle, commonActions } = require('../lib/css-value');
+let { blocksToJavaScript, commonActions } = require('../lib/css-value');
 
-class Scanner extends DomObject {
+class WritingCode extends DomObject {
 
-    async scanner() {
+    async writingCode() {
 
-        await this.click(turtle.scanner, commonActions.showInstructions);
+        await this.click(blocksToJavaScript.writingCode,commonActions.showInstructions);
 
-        await driver.sleep(2000);
         await this.switchToIframe(commonActions.idOfIframe);
         
         let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
-        assert.equal(headerTitle, 'Turtle Scanner');
+        assert.equal(headerTitle, 'Writing Code');
         console.debug(`The header of the sidedocs is "${headerTitle}"`);
-      
 
         await this.switchToDefaultFrame();
 
         await this.click(commonActions.microbitLogo);
-
     }
 
     test() {
-        it('Start learning the "Turtle Scanner"', async () => {
-            return await this.scanner();
+        it('Start learning the "Writing Code"', async () => {
+            return await this.writingCode();
         });
     }
 
 }
-export let scanner = new Scanner();
+export let writingCode = new WritingCode();

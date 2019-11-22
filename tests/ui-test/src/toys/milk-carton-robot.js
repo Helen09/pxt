@@ -6,12 +6,11 @@ class MilkCartonRobot extends DomObject {
 
     async milkCartonRobot() {
 
-        await this.click(toys.milkCartonRobot, commonActions.closeButton,
-            toys.milkCartonRobot, commonActions.showInstructions);
+        await this.click(toys.milkCartonRobot, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(toys.titleOfMilkCartonRobot);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Milk Carton Robot');
         console.debug(`The header of the new page is "${headerTitle}"`);
         

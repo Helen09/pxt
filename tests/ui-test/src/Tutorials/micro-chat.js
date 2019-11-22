@@ -6,8 +6,7 @@ class MicroChat extends DomObject {
 
     async microChat() {
 
-        await this.click(tutorials.microChat, commonActions.closeButton,
-            tutorials.microChat, commonActions.startTutorial);
+        await this.click(tutorials.microChat, commonActions.startTutorial);
 
         let headerTitle = await this.getText(commonActions.headerTitle);
         assert.equal(headerTitle, 'Micro Chat');

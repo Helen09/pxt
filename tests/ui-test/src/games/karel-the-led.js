@@ -6,12 +6,11 @@ class KarelTheLed extends DomObject {
 
     async karelTheLed() {
 
-        await this.click(games.karelTheLed, commonActions.closeButton,
-            games.karelTheLed, commonActions.showInstructions);
+        await this.click(games.karelTheLed, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(games.titleOfKarelTheLed);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Karel the LED');
         console.debug(`The title of the current page is "${headerTitle}"`);
 

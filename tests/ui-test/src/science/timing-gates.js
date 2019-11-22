@@ -6,12 +6,11 @@ class TimingGates extends DomObject {
 
     async timingGates() {
 
-        await this.click(science.timingGates, commonActions.closeButton,
-            science.timingGates, commonActions.showInstructions);
+        await this.click(science.timingGates, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(science.titleOfTimingGates);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Timing Gates');
         console.debug(`The header of the new page is "${headerTitle}"`);
         

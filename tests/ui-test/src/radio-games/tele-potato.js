@@ -6,8 +6,7 @@ class TelePotato extends DomObject {
 
     async telePotato() {
 
-        await this.click(radioGames.telePotato, commonActions.closeButton,
-            radioGames.telePotato, commonActions.showInstructions);
+        await this.click(radioGames.telePotato, commonActions.showInstructions);
 
         await driver.sleep(3000);
 
@@ -15,7 +14,7 @@ class TelePotato extends DomObject {
 
         try {
 
-            let headerTitle = await this.getText(radioGames.titleOfTelePotato);
+            let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
             assert.equal(headerTitle, 'Tele-Potato');
             console.debug(`The header of the sidedocs is "${headerTitle}"`);
 

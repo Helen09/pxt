@@ -6,12 +6,11 @@ class CrashyBird extends DomObject {
 
     async crashyBird() {
 
-        await this.click(games.crashyBird, commonActions.closeButton,
-            games.crashyBird, commonActions.showInstructions);
+        await this.click(games.crashyBird, commonActions.showInstructions);
 
         await this.switchToNewWindow();
         
-        let headerTitle = await this.getText(games.titleOfCrashyBird);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Crashy Bird');
         console.debug(`The title of the current page is "${headerTitle}"`);
 

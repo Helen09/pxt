@@ -6,12 +6,11 @@ class KitronikRCCarHack extends DomObject {
 
     async KitronikRCCarHack() {
 
-        await this.click(toys.kitronikRCCarHack, commonActions.closeButton,
-            toys.kitronikRCCarHack, commonActions.showInstructions);
+        await this.click(toys.kitronikRCCarHack, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(toys.titleOfRCCar);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'RC Car');
         console.debug(`The header of the new page is "${headerTitle}"`);
         

@@ -6,12 +6,11 @@ class HotOrCold extends DomObject {
 
     async hotOrCold() {
 
-        await this.click(radioGames.hotOrCold, commonActions.closeButton,
-            radioGames.hotOrCold, commonActions.showInstructions);
+        await this.click(radioGames.hotOrCold, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(radioGames.titleOfHotOrCold);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Hot or Cold');
         console.debug(`The title of the current page is "${headerTitle}"`);
 

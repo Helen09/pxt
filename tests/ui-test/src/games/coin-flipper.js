@@ -6,8 +6,7 @@ class CoinFlipper extends DomObject {
 
     async coinFlipper() {
 
-        await this.click(games.coinFlipper, commonActions.closeButton,
-            games.coinFlipper, commonActions.startTutorial);
+        await this.click(games.coinFlipper, commonActions.startTutorial);
 
         let headerTitle = await this.getText(commonActions.headerTitle);
         assert.equal(headerTitle, 'Coin Flipper');

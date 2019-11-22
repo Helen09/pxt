@@ -6,12 +6,11 @@ class Spiral extends DomObject {
 
     async spiral() {
 
-        await this.click(turtle.spiral, commonActions.closeButton,
-            turtle.spiral, commonActions.showInstructions);
+        await this.click(turtle.spiral, commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);
         try {
-            let headerTitle = await this.getText(turtle.titleOfSpiral);
+            let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
             assert.equal(headerTitle, 'Turtle Spiral');
             console.debug(`The header of the sidedocs is "${headerTitle}"`);
         } catch (error) {

@@ -6,12 +6,11 @@ class ReactionTime extends DomObject {
 
     async reactionTime() {
 
-        await this.click(games.reactionTime, commonActions.closeButton,
-            games.reactionTime, commonActions.showInstructions);
+        await this.click(games.reactionTime, commonActions.showInstructions);
 
         await this.switchToNewWindow();
         
-        let headerTitle = await this.getText(games.titleOfReactionTime);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Reaction Time');
         console.debug(`The title of the current page is "${headerTitle}"`);
 

@@ -6,8 +6,7 @@ class FlashingHeart extends DomObject {
 
     async flashingHeart() {
 
-        await this.click(tutorials.flashingHeart, commonActions.closeButton,
-            tutorials.flashingHeart, commonActions.startTutorial);
+        await this.click(tutorials.flashingHeart, commonActions.startTutorial);
 
         let headerTitle = await this.getText(commonActions.headerTitle);
         assert.equal(headerTitle, 'Flashing Heart');

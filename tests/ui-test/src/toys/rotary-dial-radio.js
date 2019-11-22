@@ -6,12 +6,11 @@ class RotaryDialRadio extends DomObject {
 
     async rotaryDialRadio() {
 
-        await this.click(toys.rotaryDialRadio, commonActions.closeButton,
-            toys.rotaryDialRadio, commonActions.showInstructions);
+        await this.click(toys.rotaryDialRadio, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(toys.titleOfRotaryDialRadio);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Rotary Dial Radio');
         console.debug(`The header of the new page is "${headerTitle}"`);
         

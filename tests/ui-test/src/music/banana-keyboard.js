@@ -6,12 +6,11 @@ class BananaKeyboard extends DomObject {
 
     async bananaKeyboard() {
 
-        await this.click(music.bananaKeyboard, commonActions.closeButton,
-            music.bananaKeyboard, commonActions.showInstructions);
+        await this.click(music.bananaKeyboard, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(music.titleOfkeyBoard);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Banana Keyboard');
         console.debug(`The header of the new page is "${headerTitle}"`);
         

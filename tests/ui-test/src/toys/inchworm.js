@@ -6,12 +6,11 @@ class Inchworm extends DomObject {
 
     async inchworm() {
 
-        await this.click(toys.inchworm, commonActions.closeButton,
-            toys.inchworm, commonActions.showInstructions);
+        await this.click(toys.inchworm, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(toys.titleOfInchworm);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Inchworm');
         console.debug(`The header of the new page is "${headerTitle}"`);
         

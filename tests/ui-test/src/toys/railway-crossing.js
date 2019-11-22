@@ -6,12 +6,11 @@ class RailwayCrossing extends DomObject {
 
     async railwayCrossing() {
 
-        await this.click(toys.railwayCrossing, commonActions.closeButton,
-            toys.railwayCrossing, commonActions.showInstructions);
+        await this.click(toys.railwayCrossing, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(toys.titleOfRailwayCrossing);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Railway Crossing');
         console.debug(`The header of the new page is "${headerTitle}"`);
         

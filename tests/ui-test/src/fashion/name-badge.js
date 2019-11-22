@@ -6,12 +6,11 @@ class NameBadge extends DomObject {
 
     async nameBadge() {
 
-        await this.click(fashion.nameBadge, commonActions.closeButton,
-            fashion.nameBadge, commonActions.showInstructions);
+        await this.click(fashion.nameBadge, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(fashion.titleOfNameBadge);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Name Badge');
         console.debug(`The header of the new page is "${headerTitle}"`);
         

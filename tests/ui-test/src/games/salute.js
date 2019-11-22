@@ -6,13 +6,12 @@ class Salute extends DomObject {
 
     async salute() {
 
-        await this.click(games.salute, commonActions.closeButton,
-            games.salute, commonActions.showInstructions);
+        await this.click(games.salute, commonActions.showInstructions);
 
         await this.switchToNewWindow();
         
         try {
-            let headerTitle = await this.getText(games.titleOfSalute);
+            let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
             assert.equal(headerTitle, 'Salute!');
             console.debug(`The title of the current page is "${headerTitle}"`);
 

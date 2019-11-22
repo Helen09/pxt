@@ -6,8 +6,7 @@ class LoveMeter extends DomObject {
 
     async loveMeter() {
 
-        await this.click(tutorials.loveMeter, commonActions.closeButton,
-            tutorials.loveMeter, commonActions.startTutorial);
+        await this.click(tutorials.loveMeter, commonActions.startTutorial);
 
         let headerTitle = await this.getText(commonActions.headerTitle);
         assert.equal(headerTitle, 'Love Meter');

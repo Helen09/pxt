@@ -6,12 +6,11 @@ class MicroCoin extends DomObject {
 
     async microCoin() {
 
-        await this.click(radioGames.microCoin, commonActions.closeButton,
-            radioGames.microCoin, commonActions.showInstructions);
+        await this.click(radioGames.microCoin, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(radioGames.titleOfMicroCoin);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'micro:coin');
         console.debug(`The header of the new page is "${headerTitle}"`);
 

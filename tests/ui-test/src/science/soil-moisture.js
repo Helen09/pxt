@@ -6,12 +6,11 @@ class SoilMoisture extends DomObject {
 
     async soilMoisture() {
 
-        await this.click(science.soilMoisture, commonActions.closeButton,
-            science.soilMoisture, commonActions.showInstructions);
+        await this.click(science.soilMoisture, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(science.titleOfSoilMoisture);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Soil Moisture');
         console.debug(`The header of the new page is "${headerTitle}"`);
         

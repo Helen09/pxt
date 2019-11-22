@@ -6,12 +6,11 @@ class Guitar extends DomObject {
 
     async guitar() {
 
-        await this.click(music.guitar, commonActions.closeButton,
-            music.guitar, commonActions.showInstructions);
+        await this.click(music.guitar, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(music.titleOfGuitar);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Guitar');
         console.debug(`The header of the new page is "${headerTitle}"`);
         

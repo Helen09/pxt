@@ -6,15 +6,15 @@ class LightLevelMeter extends DomObject {
 
     async lightLevelMeter() {
 
-        await this.click(tools.lightLevelMeter, commonActions.closeButton,
-            tools.lightLevelMeter, commonActions.showInstructions);
+        await this.click(tools.lightLevelMeter, commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);
 
-        let headerTitle = await this.getText(tools.titleOfLightLevelMeter);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Light Level Meter');
         console.debug(`The header of the sidedocs is "${headerTitle}"`);
         
+        await this.switchToDefaultFrame();
         await this.click(commonActions.microbitLogo);
 
     }

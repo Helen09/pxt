@@ -6,12 +6,11 @@ class VotingMachine extends DomObject {
 
     async votingMachine() {
 
-        await this.click(radioGames.votingMachine, commonActions.closeButton,
-            radioGames.votingMachine, commonActions.showInstructions);
+        await this.click(radioGames.votingMachine, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(radioGames.titleOfVotingMachine);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Voting Machine');
         console.debug(`The title of the current page is "${headerTitle}"`);
 

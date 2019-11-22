@@ -6,12 +6,11 @@ class StopWatch extends DomObject {
 
     async stopWatch() {
 
-        await this.click(fashion.stopWatch, commonActions.closeButton,
-            fashion.stopWatch, commonActions.showInstructions);
+        await this.click(fashion.stopWatch, commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);
 
-        let headerTitle = await this.getText(fashion.titleOfStopWatch);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Stopwatch');
         console.debug(`The header of the sidedocs is "${headerTitle}"`);
         

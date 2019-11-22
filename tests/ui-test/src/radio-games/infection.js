@@ -6,14 +6,13 @@ class Infection extends DomObject {
 
     async infection() {
 
-        await this.click(radioGames.infection, commonActions.closeButton,
-            radioGames.infection, commonActions.showInstructions);
+        await this.click(radioGames.infection, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
         try {
 
-            let headerTitle = await this.getText(radioGames.titleOfInfection);
+            let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
             assert.equal(headerTitle, 'Infection');
             console.debug(`The title of the current page is "${headerTitle}"`);
 

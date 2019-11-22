@@ -6,12 +6,11 @@ class DuctTapeWatch extends DomObject {
 
     async ductTapeWatch() {
 
-        await this.click(fashion.ductTapeWatch, commonActions.closeButton,
-            fashion.ductTapeWatch, commonActions.showInstructions);
+        await this.click(fashion.ductTapeWatch, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(fashion.titleOfDuctTapeWatch);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Duct Tape Watch');
         console.debug(`The header of the new page is "${headerTitle}"`);
         

@@ -6,12 +6,11 @@ class PlantWatering extends DomObject {
 
     async plantWatering() {
 
-        await this.click(science.plantWatering, commonActions.closeButton,
-            science.plantWatering, commonActions.showInstructions);
+        await this.click(science.plantWatering, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(science.titleOfPlantWatering);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Plant Watering');
         console.debug(`The header of the new page is "${headerTitle}"`);
         

@@ -6,15 +6,15 @@ class ServoCalibrator extends DomObject {
 
     async servoCalibrator() {
 
-        await this.click(tools.servoCalibrator, commonActions.closeButton,
-            tools.servoCalibrator, commonActions.showInstructions);
+        await this.click(tools.servoCalibrator, commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);
 
-        let headerTitle = await this.getText(tools.titleOfServoCalibrator);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Servo Calibrator');
         console.debug(`The header of the sidedocs is "${headerTitle}"`);
         
+        await this.switchToDefaultFrame();
         await this.click(commonActions.microbitLogo);
 
     }
