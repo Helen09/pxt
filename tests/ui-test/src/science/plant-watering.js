@@ -11,7 +11,7 @@ class PlantWatering extends DomObject {
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(science.titleOfPlantWatering);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Plant Watering');
         console.debug(`The header of the new page is "${headerTitle}"`);
         

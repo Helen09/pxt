@@ -11,7 +11,7 @@ class HackYourHeadphones extends DomObject {
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(music.titleOfHeadphones);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Hack Your Headphones');
         console.debug(`The header of the new page is "${headerTitle}"`);
         

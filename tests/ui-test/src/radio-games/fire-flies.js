@@ -11,7 +11,7 @@ class FireFlies extends DomObject {
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(radioGames.titleOfFireflies);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Fireflies');
         console.debug(`The title of the current page is "${headerTitle}"`);
 

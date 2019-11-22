@@ -11,13 +11,13 @@ class DuctTapeWallet extends DomObject {
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(fashion.titleOfWallet);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Wallet');
         console.debug(`The header of the new page is "${headerTitle}"`);
         
         await this.click(commonActions.getStartButton);
 
-        let newPageTitle = await this.getText(fashion.titleOfNewPage);
+        let newPageTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(newPageTitle, 'Make');
         console.debug(`The title of the new page is "${newPageTitle}"`);
 

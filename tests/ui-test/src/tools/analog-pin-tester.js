@@ -11,7 +11,7 @@ class AnalogPinTester extends DomObject {
 
         await this.switchToIframe(commonActions.idOfIframe);
 
-        let headerTitle = await this.getText(tools.titleOfAnalogPinTester);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Analog Pin Tester');
         console.debug(`The header of the sidedocs is "${headerTitle}"`);
 

@@ -11,7 +11,7 @@ class RobotUnicorn extends DomObject {
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(toys.titleOfRobotUnicorn);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Robot Unicorn');
         console.debug(`The header of the new page is "${headerTitle}"`);
         

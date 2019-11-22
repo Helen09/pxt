@@ -11,13 +11,13 @@ class Watch extends DomObject {
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(fashion.titleOfWatch);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'The Watch');
         console.debug(`The header of the new page is "${headerTitle}"`);
         
         await this.click(commonActions.getStartButton);
 
-        let newPageTitle = await this.getText(fashion.titleOfMakeWatch);
+        let newPageTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(newPageTitle, 'The Watch - Make');
         console.debug(`The title of the new page is "${newPageTitle}"`);
 

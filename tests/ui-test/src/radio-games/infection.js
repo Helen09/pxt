@@ -13,7 +13,7 @@ class Infection extends DomObject {
 
         try {
 
-            let headerTitle = await this.getText(radioGames.titleOfInfection);
+            let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
             assert.equal(headerTitle, 'Infection');
             console.debug(`The title of the current page is "${headerTitle}"`);
 

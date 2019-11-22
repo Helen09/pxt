@@ -15,7 +15,7 @@ class TelePotato extends DomObject {
 
         try {
 
-            let headerTitle = await this.getText(radioGames.titleOfTelePotato);
+            let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
             assert.equal(headerTitle, 'Tele-Potato');
             console.debug(`The header of the sidedocs is "${headerTitle}"`);
 

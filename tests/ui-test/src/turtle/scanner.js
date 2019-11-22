@@ -12,7 +12,7 @@ class Scanner extends DomObject {
         await driver.sleep(2000);
         await this.switchToIframe(commonActions.idOfIframe);
         
-        let headerTitle = await this.getText(turtle.titleOfScanner);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Turtle Scanner');
         console.debug(`The header of the sidedocs is "${headerTitle}"`);
       

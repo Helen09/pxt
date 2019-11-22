@@ -11,7 +11,7 @@ class SoilMoisture extends DomObject {
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(science.titleOfSoilMoisture);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Soil Moisture');
         console.debug(`The header of the new page is "${headerTitle}"`);
         

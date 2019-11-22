@@ -11,7 +11,7 @@ class StepCounter extends DomObject {
 
         await this.switchToIframe(commonActions.idOfIframe);
 
-        let headerTitle = await this.getText(fashion.titleOfStepCounter);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Step Counter');
         console.debug(`The header of the sidedocs is "${headerTitle}"`);
         

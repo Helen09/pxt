@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from 'assert';
-let { moreOfProject } = require('../lib/css-value');
+let { moreOfProject, commonActions } = require('../lib/css-value');
 
 class GetMoreList extends DomObject {
 
@@ -34,7 +34,7 @@ class GetMoreList extends DomObject {
         }
         await this.click(moreOfProject.moreButton, moreOfProject.extensionsOption);
 
-        let extensionHeader = await this.getText(moreOfProject.FirstExtensionTitle);
+        let extensionHeader = await this.getText(moreOfProject.firstExtensionTitle);
         
         assert.equal(extensionHeader, 'bluetooth');
         
@@ -42,7 +42,7 @@ class GetMoreList extends DomObject {
 
         await this.click(moreOfProject.goBackButtonInExtensions, moreOfProject.moreButton, moreOfProject.deleteOption);
 
-        let deleteTitle = await this.getText(moreOfProject.titleOfDeleteAlert);
+        let deleteTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         
         assert.equal(deleteTitle, "Would you like to delete 'Fortest'?");
         
@@ -51,7 +51,7 @@ class GetMoreList extends DomObject {
         await this.click(moreOfProject.cancelButton, moreOfProject.moreButton, moreOfProject.reportAbuse,
             moreOfProject.cancelButton, moreOfProject.moreButton, moreOfProject.languageOption);
 
-        let languageHeader = await this.getText(moreOfProject.headerTitle);
+        let languageHeader = await this.getText(commonActions.headerTitle);
         
         assert.equal(languageHeader, 'Select Language');
         
@@ -63,7 +63,7 @@ class GetMoreList extends DomObject {
 
         await this.click(moreOfProject.moreButton, moreOfProject.turnOnTheGreenScreen);
 
-        let headerTitle = await this.getText(moreOfProject.headerTitle);
+        let headerTitle = await this.getText(commonActions.headerTitle);
         
         assert.equal(headerTitle, 'Choose a camera');
 
@@ -81,7 +81,7 @@ class GetMoreList extends DomObject {
 
         await this.click(moreOfProject.moreButton, moreOfProject.pairDevice);
 
-        let pairDeviceTitle = await this.getText(moreOfProject.headerTitle);
+        let pairDeviceTitle = await this.getText(commonActions.headerTitle);
         
         assert.equal(pairDeviceTitle, 'Pair device for one-click downloads');
         

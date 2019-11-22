@@ -11,7 +11,7 @@ class MagicButtonTrick extends DomObject {
 
         await this.switchToNewWindow();
          
-        let headerTitle = await this.getText(games.titleOfMagic);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Magic Button Trick');
         console.debug(`The title of the current page is "${headerTitle}"`);
 

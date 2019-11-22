@@ -22,7 +22,7 @@ class GetHelpList extends DomObject {
 
         await this.switchToIframe(commonActions.idOfIframe);
 
-        let referenceTitle = await this.getText(helpOfProject.titleOfReferencePage);
+        let referenceTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
 
         assert.equal(referenceTitle, 'Reference');
 
@@ -34,7 +34,7 @@ class GetHelpList extends DomObject {
 
         await this.switchToNewWindow();
 
-        let newPageTitle = await this.getText(helpOfProject.titleOfReferencePage);
+        let newPageTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
 
         assert.equal(newPageTitle, 'Reference');
 
@@ -46,7 +46,7 @@ class GetHelpList extends DomObject {
 
         await this.switchToIframe(commonActions.idOfIframe);
 
-        let blocksTitle = await this.getText(helpOfProject.titleOfBlocksPage);
+        let blocksTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
 
         assert.equal(blocksTitle, 'Blocks language');
 
@@ -60,7 +60,7 @@ class GetHelpList extends DomObject {
 
         await this.switchToIframe(commonActions.idOfIframe);
 
-        let javascriptTitle = await this.getText(helpOfProject.titleOfJavaScriptPage);
+        let javascriptTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
 
         assert.equal(javascriptTitle, 'JavaScript');
 
@@ -74,7 +74,7 @@ class GetHelpList extends DomObject {
 
         await this.click(helpOfProject.goBackButton);
 
-        let goBackResult = await this.getText(helpOfProject.titleAfterGoBack);
+        let goBackResult = await this.getText(commonActions.titleOfNewOpenedWindow);
 
         assert.notEqual(goBackResult, 'Device');
 

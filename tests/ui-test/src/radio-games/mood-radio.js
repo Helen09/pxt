@@ -11,7 +11,7 @@ class MoodRadio extends DomObject {
 
         await this.switchToIframe(commonActions.idOfIframe);
         try {
-            let headerTitle = await this.getText(radioGames.titleOfMoodRadio);
+            let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
             assert.equal(headerTitle, 'Mood Radio');
             console.debug(`The header of the sidedocs is "${headerTitle}"`);
         } catch (error) {

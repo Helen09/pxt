@@ -11,7 +11,7 @@ class RedLightGreenLight extends DomObject {
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(radioGames.titleOfRedLightGreenLight);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Red Light Green Light');
         console.debug(`The header of the new page is "${headerTitle}"`);
 

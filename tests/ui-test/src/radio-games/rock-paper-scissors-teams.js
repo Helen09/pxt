@@ -11,7 +11,7 @@ class RockPaperScissorsTeams extends DomObject {
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(radioGames.titleOfRockPaperScissorsTeams);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Rock Paper Scissors Teams');
         console.debug(`The title of the current page is "${headerTitle}"`);
 

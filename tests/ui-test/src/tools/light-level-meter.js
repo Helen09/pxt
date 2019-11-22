@@ -11,7 +11,7 @@ class LightLevelMeter extends DomObject {
 
         await this.switchToIframe(commonActions.idOfIframe);
 
-        let headerTitle = await this.getText(tools.titleOfLightLevelMeter);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Light Level Meter');
         console.debug(`The header of the sidedocs is "${headerTitle}"`);
         

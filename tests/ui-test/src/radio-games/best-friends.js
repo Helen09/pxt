@@ -11,7 +11,7 @@ class BestFriends extends DomObject {
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(radioGames.titleOfBestFriends);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Best Friends');
         console.debug(`The header of the new page is "${headerTitle}"`);
 

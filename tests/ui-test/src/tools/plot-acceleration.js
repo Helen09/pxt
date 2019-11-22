@@ -11,7 +11,7 @@ class PlotAcceleration extends DomObject {
 
         await this.switchToIframe(commonActions.idOfIframe);
 
-        let headerTitle = await this.getText(tools.titleOfPlotAcceleration);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
         assert.equal(headerTitle, 'Plot Acceleration');
         console.debug(`The header of the sidedocs is "${headerTitle}"`);
         
