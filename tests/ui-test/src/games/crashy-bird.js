@@ -6,8 +6,7 @@ class CrashyBird extends DomObject {
 
     async crashyBird() {
 
-        await this.click(games.crashyBird, commonActions.closeButton,
-            games.crashyBird, commonActions.showInstructions);
+        await this.click(games.crashyBird, commonActions.showInstructions);
 
         await this.switchToNewWindow();
         

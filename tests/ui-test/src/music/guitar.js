@@ -6,8 +6,7 @@ class Guitar extends DomObject {
 
     async guitar() {
 
-        await this.click(music.guitar, commonActions.closeButton,
-            music.guitar, commonActions.showInstructions);
+        await this.click(music.guitar, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

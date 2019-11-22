@@ -6,8 +6,7 @@ class KarelTheLed extends DomObject {
 
     async karelTheLed() {
 
-        await this.click(games.karelTheLed, commonActions.closeButton,
-            games.karelTheLed, commonActions.showInstructions);
+        await this.click(games.karelTheLed, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

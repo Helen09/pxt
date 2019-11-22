@@ -6,8 +6,7 @@ class Spiral extends DomObject {
 
     async spiral() {
 
-        await this.click(turtle.spiral, commonActions.closeButton,
-            turtle.spiral, commonActions.showInstructions);
+        await this.click(turtle.spiral, commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);
         try {

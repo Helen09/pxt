@@ -6,8 +6,7 @@ class SmileyButtons extends DomObject {
 
     async smileyButtons() {
 
-        await this.click(tutorials.smileyButtons, commonActions.closeButton,
-            tutorials.smileyButtons, commonActions.startTutorial);
+        await this.click(tutorials.smileyButtons, commonActions.startTutorial);
         
         let headerTitle = await this.getText(commonActions.headerTitle);
         assert.equal(headerTitle, 'Smiley Buttons');

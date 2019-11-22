@@ -6,8 +6,7 @@ class BestFriends extends DomObject {
 
     async bestFriends() {
 
-        await this.click(radioGames.bestFriends, commonActions.closeButton,
-            radioGames.bestFriends, commonActions.showInstructions);
+        await this.click(radioGames.bestFriends, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

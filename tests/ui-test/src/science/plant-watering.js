@@ -6,8 +6,7 @@ class PlantWatering extends DomObject {
 
     async plantWatering() {
 
-        await this.click(science.plantWatering, commonActions.closeButton,
-            science.plantWatering, commonActions.showInstructions);
+        await this.click(science.plantWatering, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

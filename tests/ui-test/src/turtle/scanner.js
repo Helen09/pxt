@@ -6,8 +6,7 @@ class Scanner extends DomObject {
 
     async scanner() {
 
-        await this.click(turtle.scanner, commonActions.closeButton,
-            turtle.scanner, commonActions.showInstructions);
+        await this.click(turtle.scanner, commonActions.showInstructions);
 
         await driver.sleep(2000);
         await this.switchToIframe(commonActions.idOfIframe);

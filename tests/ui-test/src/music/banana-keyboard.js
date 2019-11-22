@@ -6,8 +6,7 @@ class BananaKeyboard extends DomObject {
 
     async bananaKeyboard() {
 
-        await this.click(music.bananaKeyboard, commonActions.closeButton,
-            music.bananaKeyboard, commonActions.showInstructions);
+        await this.click(music.bananaKeyboard, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

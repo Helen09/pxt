@@ -6,8 +6,7 @@ class HackYourHeadphones extends DomObject {
 
     async hackYourHeadphones() {
 
-        await this.click(music.hackYourHeadphones, commonActions.closeButton,
-            music.hackYourHeadphones, commonActions.showInstructions);
+        await this.click(music.hackYourHeadphones, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

@@ -6,8 +6,7 @@ class StepCounter extends DomObject {
 
     async stepCounter() {
 
-        await this.click(fashion.stepCounter, commonActions.closeButton,
-            fashion.stepCounter, commonActions.showInstructions);
+        await this.click(fashion.stepCounter, commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);
 

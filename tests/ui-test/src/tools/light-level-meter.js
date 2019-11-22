@@ -6,8 +6,7 @@ class LightLevelMeter extends DomObject {
 
     async lightLevelMeter() {
 
-        await this.click(tools.lightLevelMeter, commonActions.closeButton,
-            tools.lightLevelMeter, commonActions.showInstructions);
+        await this.click(tools.lightLevelMeter, commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);
 

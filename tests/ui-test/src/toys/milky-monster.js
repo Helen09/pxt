@@ -6,8 +6,7 @@ class MilkMonster extends DomObject {
 
     async milkMonster() {
 
-        await this.click(toys.milkMonster, commonActions.closeButton,
-            toys.milkMonster, commonActions.showInstructions);
+        await this.click(toys.milkMonster, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

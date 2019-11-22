@@ -6,8 +6,7 @@ class ReactionTime extends DomObject {
 
     async reactionTime() {
 
-        await this.click(games.reactionTime, commonActions.closeButton,
-            games.reactionTime, commonActions.showInstructions);
+        await this.click(games.reactionTime, commonActions.showInstructions);
 
         await this.switchToNewWindow();
         

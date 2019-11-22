@@ -6,8 +6,7 @@ class FireFlies extends DomObject {
 
     async fireFlies() {
 
-        await this.click(radioGames.fireFlies, commonActions.closeButton,
-            radioGames.fireFlies, commonActions.showInstructions);
+        await this.click(radioGames.fireFlies, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

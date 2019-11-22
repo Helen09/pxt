@@ -6,8 +6,7 @@ class MicroCoin extends DomObject {
 
     async microCoin() {
 
-        await this.click(radioGames.microCoin, commonActions.closeButton,
-            radioGames.microCoin, commonActions.showInstructions);
+        await this.click(radioGames.microCoin, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

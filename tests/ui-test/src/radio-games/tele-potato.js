@@ -6,8 +6,7 @@ class TelePotato extends DomObject {
 
     async telePotato() {
 
-        await this.click(radioGames.telePotato, commonActions.closeButton,
-            radioGames.telePotato, commonActions.showInstructions);
+        await this.click(radioGames.telePotato, commonActions.showInstructions);
 
         await driver.sleep(3000);
 

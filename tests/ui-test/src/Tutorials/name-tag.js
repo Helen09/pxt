@@ -6,8 +6,7 @@ class NameTag extends DomObject {
 
     async nameTag() {
 
-        await this.click(tutorials.nameTag, commonActions.closeButton,
-            tutorials.nameTag, commonActions.startTutorial);
+        await this.click(tutorials.nameTag, commonActions.startTutorial);
 
         let headerTitle = await this.getText(commonActions.headerTitle);
         assert.equal(headerTitle, 'Name Tag');

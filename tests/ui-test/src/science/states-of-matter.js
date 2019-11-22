@@ -6,8 +6,7 @@ class StatesOfMatter extends DomObject {
 
     async statesOfMatter() {
 
-        await this.click(science.statesOfMatter, commonActions.closeButton,
-            science.statesOfMatter, commonActions.showInstructions);
+        await this.click(science.statesOfMatter, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

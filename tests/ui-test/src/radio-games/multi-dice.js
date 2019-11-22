@@ -6,8 +6,7 @@ class MultiDice extends DomObject {
 
     async multiDice() {
 
-        await this.click(radioGames.multiDice, commonActions.closeButton,
-            radioGames.multiDice, commonActions.startTutorial);
+        await this.click(radioGames.multiDice, commonActions.startTutorial);
 
         let headerTitle = await this.getText(commonActions.headerTitle);
         assert.equal(headerTitle, 'Multi Dice');

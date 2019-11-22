@@ -6,8 +6,7 @@ class RedLightGreenLight extends DomObject {
 
     async redLightGreenLight() {
 
-        await this.click(radioGames.redLightGreenLight, commonActions.closeButton,
-            radioGames.redLightGreenLight, commonActions.showInstructions);
+        await this.click(radioGames.redLightGreenLight, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

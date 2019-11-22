@@ -6,8 +6,7 @@ class SnapTheDot extends DomObject {
 
     async snapTheDot() {
 
-        await this.click(games.snapTheDot, commonActions.closeButton,
-            games.snapTheDot, commonActions.startTutorial); 
+        await this.click(games.snapTheDot, commonActions.startTutorial); 
        
         let headerTitle = await this.getText(commonActions.headerTitle);
         assert.equal(headerTitle, 'Snap the Dot');

@@ -6,8 +6,7 @@ class Dice extends DomObject {
 
     async dice() {
 
-        await this.click(tutorials.dice, commonActions.closeButton,
-            tutorials.dice, commonActions.startTutorial);
+        await this.click(tutorials.dice, commonActions.startTutorial);
 
         let headerTitle = await this.getText(commonActions.headerTitle);
         assert.equal(headerTitle, 'Dice');

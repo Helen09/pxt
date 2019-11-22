@@ -6,8 +6,7 @@ class RockPaperScissorsTeams extends DomObject {
 
     async rockPaperScissorsTeams() {
 
-        await this.click(radioGames.rockPaperScissorsTeams, commonActions.closeButton,
-            radioGames.rockPaperScissorsTeams, commonActions.showInstructions);
+        await this.click(radioGames.rockPaperScissorsTeams, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

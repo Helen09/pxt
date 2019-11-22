@@ -6,8 +6,7 @@ class MoodRadio extends DomObject {
 
     async moodRadio() {
 
-        await this.click(radioGames.moodRadio, commonActions.closeButton,
-            radioGames.moodRadio, commonActions.showInstructions);
+        await this.click(radioGames.moodRadio, commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);
         try {

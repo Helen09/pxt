@@ -6,8 +6,7 @@ class KitronikRCCarHack extends DomObject {
 
     async KitronikRCCarHack() {
 
-        await this.click(toys.kitronikRCCarHack, commonActions.closeButton,
-            toys.kitronikRCCarHack, commonActions.showInstructions);
+        await this.click(toys.kitronikRCCarHack, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

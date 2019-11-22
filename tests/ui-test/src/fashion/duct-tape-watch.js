@@ -6,8 +6,7 @@ class DuctTapeWatch extends DomObject {
 
     async ductTapeWatch() {
 
-        await this.click(fashion.ductTapeWatch, commonActions.closeButton,
-            fashion.ductTapeWatch, commonActions.showInstructions);
+        await this.click(fashion.ductTapeWatch, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

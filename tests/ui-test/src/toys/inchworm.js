@@ -6,8 +6,7 @@ class Inchworm extends DomObject {
 
     async inchworm() {
 
-        await this.click(toys.inchworm, commonActions.closeButton,
-            toys.inchworm, commonActions.showInstructions);
+        await this.click(toys.inchworm, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

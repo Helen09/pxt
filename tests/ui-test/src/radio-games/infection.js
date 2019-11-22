@@ -6,8 +6,7 @@ class Infection extends DomObject {
 
     async infection() {
 
-        await this.click(radioGames.infection, commonActions.closeButton,
-            radioGames.infection, commonActions.showInstructions);
+        await this.click(radioGames.infection, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

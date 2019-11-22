@@ -6,8 +6,7 @@ class TimingGates extends DomObject {
 
     async timingGates() {
 
-        await this.click(science.timingGates, commonActions.closeButton,
-            science.timingGates, commonActions.showInstructions);
+        await this.click(science.timingGates, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

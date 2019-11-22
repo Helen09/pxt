@@ -6,8 +6,7 @@ class StopWatch extends DomObject {
 
     async stopWatch() {
 
-        await this.click(fashion.stopWatch, commonActions.closeButton,
-            fashion.stopWatch, commonActions.showInstructions);
+        await this.click(fashion.stopWatch, commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);
 

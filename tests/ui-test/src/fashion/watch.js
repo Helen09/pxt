@@ -6,8 +6,7 @@ class Watch extends DomObject {
 
     async watch() {
 
-        await this.click(fashion.watch, commonActions.closeButton,
-            fashion.watch, commonActions.showInstructions);
+        await this.click(fashion.watch, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 

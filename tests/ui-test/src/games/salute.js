@@ -6,8 +6,7 @@ class Salute extends DomObject {
 
     async salute() {
 
-        await this.click(games.salute, commonActions.closeButton,
-            games.salute, commonActions.showInstructions);
+        await this.click(games.salute, commonActions.showInstructions);
 
         await this.switchToNewWindow();
         

@@ -6,8 +6,7 @@ class MagicButtonTrick extends DomObject {
 
     async magicButtonTrick() {
 
-        await this.click(games.magicButtonTrick, commonActions.closeButton,
-            games.magicButtonTrick, commonActions.showInstructions);
+        await this.click(games.magicButtonTrick, commonActions.showInstructions);
 
         await this.switchToNewWindow();
          
