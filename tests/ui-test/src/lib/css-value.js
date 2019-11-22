@@ -187,7 +187,8 @@ exports.blocksToJavaScript = {
     complexConditionals:'[aria-label="Complex Conditionals"]',
     conditionalLoops:'[aria-label="Conditional Loops"]',
     commandResponder:'[aria-label="Command Responder"]',
-    writingFunctions:'[aria-label="Writing Functions"]'
+    writingFunctions:'[aria-label="Writing Functions"]',
+    seeMoreButton:'[aria-label="Blocks To JavaScript"] [aria-label="See more"]'
 }
 exports.commonActions = {
     startTutorial: '.actions button',
