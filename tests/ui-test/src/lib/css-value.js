@@ -5,10 +5,10 @@ exports.newProject = {
     inputProjectName: 'input#projectNameInput',
     saveButtonOfHomePage: '.button.positive',
     projectTitle: "[aria-label='My Projects'] .carouselitem:nth-child(2) .header",
-    openProject: "[aria-label='My Projects'] .carouselitem:nth-child(2)"
 }
 
 exports.shareTheProject = {
+    openProject: "[aria-label='My Projects'] .carouselitem:nth-child(2)",
     shareButton: '.shareproject',
     titleOfPublishButton: '.sharedialog .actions .ui.text',
     shareName: '#projectNameInput',
@@ -106,6 +106,12 @@ exports.tutorials = {
     dice: '[aria-label="Dice"]',
     loveMeter: '[aria-label="Love Meter"]',
     microChat: '[aria-label="Micro Chat"]',
+    tutorialHint:'.avatar-image',
+    showHint:'.tutorialhint',
+    hiddenHint:'.tutorialhint.hidden',
+    basicBlocks:'div.blocklyTreeRow',
+    showLeds:'.blocklyFlyout g.blocklyDraggable:nth-child(2)',
+    foreverBlock:'g.blocklyDraggable:nth-child(2)'
 }
 
 exports.games = {
@@ -190,6 +196,25 @@ exports.blocksToJavaScript = {
     writingFunctions:'[aria-label="Writing Functions"]',
     seeMoreButton:'[aria-label="Blocks To JavaScript"] [aria-label="See more"]'
 }
+
+exports.courses = {
+    introToCsOnline:'[aria-label="Intro to CS Online"]',
+    introToCsClassroom:'[aria-label="Intro to CS Classroom"]',
+    scienceExperiments:'[aria-label="Science Experiments"]',
+    learnAllAboutMicrobit:'[aria-label="Learn All About micro:bit"]',
+    codingAndInnovation:'[aria-label="Coding and Innovation"]',
+    discoverJavaScriptBlocks:'[aria-label="Discover JavaScript Blocks"]',
+    pageTitleOfDiscover:'.page_title:nth-child(2) .alpha',
+    networkingWithTheMicrobit:'[aria-label="Networking with the micro:bit"]',
+    sparkFunVideos:'[aria-label="SparkFun Videos"]',
+    logicLab:'[aria-label="Logic Lab"]',
+    blocksToJavaScript:'[aria-label="Blocks to JavaScript"]',
+    sparkFunInventorsKit:'[aria-label="SparkFun Inventor\'s Kit"]',
+    kitronikInventorKit:'[aria-label="Kitronik Inventor Kit"]',
+    microbitOfThings:'[aria-label="micro:bit of Things"]',
+    azRobotics:'[aria-label="A-Z Robotics"]',
+}
+
 exports.commonActions = {
     startTutorial: '.actions button',
     showInstructions: '.actions .positive',

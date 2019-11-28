@@ -93,31 +93,25 @@ export class DomObject {
     }
 
     async closeCurrentWindow() {
-        let oldWindow = "";
-        await driver.getAllWindowHandles().then(function(handles){
-            oldWindow = handles[0];
-            driver.close();
-            driver.switchTo().window(oldWindow);
-        return true;
-
-        });
+        let handles = await driver.getAllWindowHandles();
+        await driver.close();
+        return await driver.switchTo().window(handles[0]);
     }
+    
 
     async switchToNewWindow() {
-        let newWindow = "";
-        await driver.getAllWindowHandles().then(function(handles){
-            newWindow = handles[1]
-            driver.switchTo().window(newWindow);
-        return true;
-        });
-    }
+        await driver.sleep(1000);
+        let handles = await driver.getAllWindowHandles();
+        return await driver.switchTo().window(handles[1]);
+    } 
+    
 
 
     async switchToIframe(criteria) {
         await driver.sleep(2000);
         let element = await this.waitforElementLocated(this.findBy(criteria), 10000);
         let newIframe = await driver.switchTo().frame(element);
-        await driver.sleep(5000);
+        await driver.sleep(3000);
         return newIframe;
 
     }
@@ -138,7 +132,7 @@ export class DomObject {
 
     async sendKeys(criteria, keys) {
 
-        let element = await this.waitforElementLocated(this.findBy(criteria), 10000);
+        let element = await driver.findElement(this.findBy(criteria));
 
         if (element !== null) {
 
@@ -156,3 +150,4 @@ export class DomObject {
         return i;
     }
 }
+export let domobject = new DomObject();

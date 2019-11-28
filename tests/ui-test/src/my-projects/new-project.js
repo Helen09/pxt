@@ -22,7 +22,6 @@ class NewProjectPage extends DomObject {
        
         console.debug(`The header text in the first DIV of 'My Projects' is: ${text}"`);
 
-        await this.click(newProject.openProject);
     }
 
     test() {
