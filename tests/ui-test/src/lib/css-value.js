@@ -213,6 +213,13 @@ exports.courses = {
     kitronikInventorKit:'[aria-label="Kitronik Inventor Kit"]',
     microbitOfThings:'[aria-label="micro:bit of Things"]',
     azRobotics:'[aria-label="A-Z Robotics"]',
+    firstjpg:'.WYuW0e.GZwC2b.dPmH0b',
+    goBackButton:'[role="toolbar"] [aria-label="Close"]',
+    codingAndInnovationTitle:'.zfr3Q.duRjpb',
+    pageTitleOfNetwork:'h1',
+    maintitleOfSparkFun:'.main-title h1',
+    titleOfKitronik:'.page-title h1',
+    courseTitle:'.course-title'
 }
 
 exports.commonActions = {

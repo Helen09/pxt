@@ -1,11 +1,11 @@
 import { website } from "../lib/website";
-import { newProjectPage } from '../my-projects/new-project'
-import { shareProject } from "../my-projects/share-project";
-import { toggleDisplayForm } from "../my-projects/toggle-editor";
-import { getHelpList } from "../my-projects/help-list";
-import { getMoreList } from "../my-projects/more-list";
-import { editorToolBar } from "../my-projects/editor-toolbar";
-import { blocklyToolBox } from "../my-projects/drag-blocks";
+import { newProjectPage } from './new-project'
+import { shareProject } from "./share-project";
+import { toggleDisplayForm } from "./toggle-editor";
+import { getHelpList } from "./help-list";
+import { getMoreList } from "./more-list";
+import { editorToolBar } from "./editor-toolbar";
+import { blocklyToolBox } from "./drag-blocks";
 import { flashingHeart } from "../tutorials/flash-heart";
 import { nameTag } from "../tutorials/name-tag";
 import { smileyButtons } from "../tutorials/smiley-buttons";
@@ -65,6 +65,20 @@ import { complexConditionals } from "../blocks-to-javascript/complex-conditional
 import { conditionalLoops } from "../blocks-to-javascript/conditional-loops";
 import { commandResponder } from "../blocks-to-javascript/command-responder";
 import { writingFunctions } from "../blocks-to-javascript/writing-functions";
+import { introToCsOnline } from "../courses/intro-to-cs-online";
+import { introToCsClassroom } from "../courses/intro-to-cs-classroom";
+import { scienceExperiments } from "../courses/science-experiments";
+import { learnAllAboutMicrobit } from "../courses/learn-all-about-microbit";
+import { codingAndInnovation } from "../courses/coding-and-innovation";
+import { discoverJavaScriptBlocks } from "../courses/discover-javascript-blocks";
+import { networkingWithTheMicrobit } from "../courses/networking-with-the-microbit";
+import { sparkFunVideos } from "../courses/sparkfun-videos";
+import { logicLab } from "../courses/logic-lab";
+import { blocksToJavaScript } from "../courses/blocks-to-javascript";
+import { sparkFunInventorsKit } from "../courses/sparkfun-inventors-kit";
+import { kitronikInventorKit } from "../courses/kitronik-inventor-kit";
+import { microbitOfThings } from "../courses/microbit-of-things";
+import { azRobotics } from "../courses/a-z-robotics";
 
 describe('Micro:bit Test', function () {
     before(async () => {
@@ -140,4 +154,18 @@ describe('Micro:bit Test', function () {
     conditionalLoops.test();
     commandResponder.test();
     writingFunctions.test();
+    introToCsOnline.test();
+    introToCsClassroom.test();
+    scienceExperiments.test();
+    learnAllAboutMicrobit.test();
+    codingAndInnovation.test();
+    discoverJavaScriptBlocks.test();
+    networkingWithTheMicrobit.test();
+    sparkFunVideos.test();
+    logicLab.test();
+    blocksToJavaScript.test();
+    sparkFunInventorsKit.test();
+    kitronikInventorKit.test();
+    microbitOfThings.test();
+    azRobotics.test();
 });

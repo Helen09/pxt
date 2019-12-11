@@ -14,6 +14,15 @@ class NameTag extends DomObject {
        
         await this.click(commonActions.okButton);
 
+        await this.click(tutorials.tutorialHint);
+
+        let hiddenHintValue = await this.getAttribute(tutorials.hiddenHint, 'class');
+        assert.equal(hiddenHintValue, 'tutorialhint Hidden');
+
+        await this.click(tutorials.tutorialHint);
+        let showHintValue = await this.getAttribute(tutorials.showHint, 'class');
+        assert.equal(showHintValue, 'tutorialhint ');
+
         for (let i = 1; i < 4; i++) {
 
             await this.click(commonActions.goNextButton);
@@ -23,6 +32,17 @@ class NameTag extends DomObject {
 
             let selectLabel = await this.getAttribute(commonActions.selectedLabel, 'aria-label');
             console.log(selectLabel);
+            
+            if(i==3){
+                let target = await this.getRect(tutorials.foreverBlock);
+
+                await this.click(tutorials.basicBlocks);
+                let start = await this.getRect(tutorials.showLeds);
+
+                let xOffSet = Math.ceil(target.x - start.x);
+                let yOffSet = Math.ceil(target.y - start.y + target.height / 2);
+                await this.dragAndDropByCoordinate(tutorials.showLeds, xOffSet, yOffSet);
+            }
         }
 
         await this.click(commonActions.okButton,commonActions.finishButton);
