@@ -222,6 +222,16 @@ exports.courses = {
     courseTitle:'.course-title'
 }
 
+exports.importProject = {
+    importButton: '[title="Import a project"]',
+    importFile: '[aria-label="Open files from your computer"]',
+    importURL:'[aria-label="Open a shared project URL or GitHub repo"]',
+    yourGitHubRepo:'[aria-label="Clone or create your own GitHub repository"]',
+    goaheadButton:'.actions .positive',
+    inputName:'#login_field',
+    inputPwd:'#password',
+    signInButton:'[type="submit"]'
+}
 exports.commonActions = {
     startTutorial: '.actions button',
     showInstructions: '.actions .positive',
