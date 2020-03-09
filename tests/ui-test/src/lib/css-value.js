@@ -221,7 +221,19 @@ exports.courses = {
     titleOfKitronik:'.page-title h1',
     courseTitle:'.course-title'
 }
-
+exports.behindTheMakeCodeHardware ={
+    leds:'[aria-label="LEDs"]',
+    buttons:'[aria-label="Buttons"]',
+    accelerometer:'[aria-label="Accelerometer"]',
+    lightSensor:'[aria-label="Light Sensor"]',
+    temperatureSensor:'[aria-label="Temperature Sensor"]',
+    pinPressed:'[aria-label="Pin Pressed"]',
+    radio:'[aria-label="Radio"]',
+    servoMotor:'[aria-label="Servo Motor"]',
+    speakers:'[aria-label="Speakers"]',
+    playVideo:'[title="Open link in new window"]',
+    videoTitle:'h1 .style-scope.ytd-video-primary-info-renderer'
+}
 exports.importProject = {
     importButton: '[title="Import a project"]',
     importFile: '[aria-label="Open files from your computer"]',

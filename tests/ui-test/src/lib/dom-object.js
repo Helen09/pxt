@@ -100,7 +100,6 @@ export class DomObject {
     
 
     async switchToNewWindow() {
-        await driver.sleep(1000);
         let handles = await driver.getAllWindowHandles();
         return await driver.switchTo().window(handles[1]);
     } 
@@ -134,16 +133,16 @@ export class DomObject {
 
         let element = await driver.findElement(this.findBy(criteria));
 
-        if (element !== null) {
+        // if (element !== null) {
 
-            element.clear();
-            element.sendKeys(keys);
+        //     element.clear();
+        //     element.sendKeys(keys);
 
-        } else {
+        // } else {
             element.sendKeys(keys);
 
         }
-    }
+    // }
 
     async click(...findBys) {
         let i = await this.actionForAll('click', findBys);
