@@ -244,6 +244,17 @@ exports.importProject = {
     inputPwd:'#password',
     signInButton:'[type="submit"]'
 }
+exports.codingCards={
+    makeADigitalBalance:'[aria-label="Make a Digital Balance"]',
+    makeADigitalDice:'[aria-label="Make a Digital Dice"]',
+    makeATrundleWheel:'[aria-label="Make a Trundle Wheel"]',
+    nervous:'[aria-label="Nervous"]',
+    reaction:'[aria-label="Reaction"]',
+    shakeTheBottle:'[aria-label="Shake the Bottle"]',
+    spriteBasedGames:'[aria-label="Sprite Based Games"]',
+    zen:'[aria-label="Zen"]',
+    showInstructions:'.card-action'
+}
 exports.commonActions = {
     startTutorial: '.actions button',
     showInstructions: '.actions .positive',

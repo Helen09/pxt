@@ -79,19 +79,29 @@ import { sparkFunInventorsKit } from "../courses/sparkfun-inventors-kit";
 import { kitronikInventorKit } from "../courses/kitronik-inventor-kit";
 import { microbitOfThings } from "../courses/microbit-of-things";
 import { azRobotics } from "../courses/a-z-robotics";
-import { importMyProject} from "../import-project/import-my-projects"
+import { importMyProject} from "../import-project/import-my-projects";
+import {leds} from "../behind-the-makecode-hardware/leds";
+import {buttons} from "../behind-the-makecode-hardware/buttons";
+import {accelerometer} from "../behind-the-makecode-hardware/accelerometer";
+import {lightSensor} from "../behind-the-makecode-hardware/light-sensor";
+import {temperatureSensor} from "../behind-the-makecode-hardware/temperature-sensor";
+import {pinPressed} from "../behind-the-makecode-hardware/pin-pressed";
+import {radio} from "../behind-the-makecode-hardware/radio";
+import {servoMotor} from "../behind-the-makecode-hardware/servo-motor";
+import {speakers} from "../behind-the-makecode-hardware/speakers";
+
 describe('Micro:bit Test', function () {
     before(async () => {
         return await website.open("beta");
     });
     after(function () {
-        website.close();
+       // website.close();
     });
 
-    importMyProject.test();
+    //importMyProject.test();
     // newProjectPage.test();
-    // shareProject.test();
-    // toggleDisplayForm.test();
+    //  shareProject.test();
+    //  toggleDisplayForm.test();
     // getHelpList.test();
     // getMoreList.test();
     // editorToolBar.test();
@@ -169,4 +179,13 @@ describe('Micro:bit Test', function () {
     // kitronikInventorKit.test();
     // microbitOfThings.test();
     // azRobotics.test();
+    leds.test();
+    buttons.test();
+    accelerometer.test();
+    lightSensor.test();
+    temperatureSensor.test();
+    pinPressed.test();
+    radio.test();
+    servoMotor.test();
+    speakers.test();
 });
