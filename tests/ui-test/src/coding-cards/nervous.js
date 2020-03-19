@@ -1,12 +1,14 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { codingCards} = require('../lib/css-value');
+let { codingCards, commonActions} = require('../lib/css-value');
 
 class Nervous extends DomObject {
 
     async nervous() {
 
-        await this.click(codingCards.nervous,codingCards.showInstructions);
+        console.log('Start test nervous()');
+
+        await this.click(codingCards.nervous,commonActions.showInstructions);
 
         await this.switchToNewWindow();
         

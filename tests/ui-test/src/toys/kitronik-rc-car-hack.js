@@ -4,7 +4,9 @@ let { toys, commonActions } = require('../lib/css-value');
 
 class KitronikRCCarHack extends DomObject {
 
-    async KitronikRCCarHack() {
+    async kitronikRCCarHack() {
+
+        console.log('Start test kitronikRCCarHack()');
 
         await this.click(toys.kitronikRCCarHack, commonActions.showInstructions);
 
@@ -32,7 +34,7 @@ class KitronikRCCarHack extends DomObject {
 
     test() {
         it('Start learning the "Kitronik RC Car Hack"', async () => {
-            return await this.KitronikRCCarHack();
+            return await this.kitronikRCCarHack();
         });
     }
 

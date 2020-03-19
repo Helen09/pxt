@@ -6,6 +6,8 @@ class SmileyButtons extends DomObject {
 
     async smileyButtons() {
 
+        console.log('Start test smileyButtons()');
+
         await this.click(tutorials.smileyButtons, commonActions.startTutorial);
         
         let headerTitle = await this.getText(commonActions.headerTitle);
@@ -17,7 +19,7 @@ class SmileyButtons extends DomObject {
         await this.click(tutorials.tutorialHint);
 
         let hiddenHintValue = await this.getAttribute(tutorials.hiddenHint, 'class');
-        assert.equal(hiddenHintValue, 'tutorialhint Hidden');
+        assert.equal(hiddenHintValue, 'tutorialhint hidden');
 
         await this.click(tutorials.tutorialHint);
         let showHintValue = await this.getAttribute(tutorials.showHint, 'class');
@@ -32,7 +34,8 @@ class SmileyButtons extends DomObject {
             let selectLabel = await this.getAttribute(commonActions.selectedLabel, 'aria-label');
             console.log(selectLabel);
 
-            if(i==3){
+            if(i==5){
+
                 let target = await this.getRect(tutorials.foreverBlock);
 
                 await this.click(tutorials.basicBlocks);

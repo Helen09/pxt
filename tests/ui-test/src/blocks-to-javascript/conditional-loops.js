@@ -6,6 +6,8 @@ class ConditionalLoops extends DomObject {
 
     async conditionalLoops() {
 
+        console.log('Start test conditionalLoops()');
+
         await this.click(blocksToJavaScript.conditionalLoops,commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);

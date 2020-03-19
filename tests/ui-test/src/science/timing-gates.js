@@ -6,6 +6,8 @@ class TimingGates extends DomObject {
 
     async timingGates() {
 
+        console.log('Start test timingGates()');
+
         await this.click(science.timingGates, commonActions.showInstructions);
 
         await this.switchToNewWindow();

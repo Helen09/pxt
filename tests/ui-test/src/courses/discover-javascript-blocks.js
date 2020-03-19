@@ -6,12 +6,14 @@ class DiscoverJavaScriptBlocks extends DomObject {
 
     async discoverJavaScriptBlocks() {
 
+        console.log('Start test discoverJavaScriptBlocks()');
+
         await this.click(courses.discoverJavaScriptBlocks, commonActions.showInstructions);
 
         await this.switchToNewWindow();
 
         let headerTitle = await this.getText(courses.pageTitleOfDiscover);
-        assert.equal(headerTitle, 'Discover MakeCode');
+        assert.equal(headerTitle, 'Make it: code it');
         console.debug(`The header of the new page is "${headerTitle}"`);
 
         await this.closeCurrentWindow();

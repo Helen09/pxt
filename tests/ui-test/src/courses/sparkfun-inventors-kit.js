@@ -6,6 +6,8 @@ class SparkFunInventorsKit extends DomObject {
 
     async sparkFunInventorsKit() {
 
+        console.log('Start test sparkFunInventorsKit()');
+
         await this.click(courses.sparkFunInventorsKit, commonActions.showInstructions);
 
         await this.switchToNewWindow();

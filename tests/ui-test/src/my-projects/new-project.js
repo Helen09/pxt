@@ -6,7 +6,7 @@ class NewProjectPage extends DomObject {
 
     async getCodeSource() {
 
-        console.debug("Start testGetCodeSource()");
+        console.log("Start test getCodeSource()");
 
         await this.click(newProject.newProjectButton, newProject.homeOfProject, newProject.closeButtonOfHomePage);
 

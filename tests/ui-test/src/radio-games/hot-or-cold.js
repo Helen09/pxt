@@ -6,6 +6,8 @@ class HotOrCold extends DomObject {
 
     async hotOrCold() {
 
+        console.log('Start test hotOrCold()');
+
         await this.click(radioGames.hotOrCold, commonActions.showInstructions);
 
         await this.switchToNewWindow();

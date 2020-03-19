@@ -6,6 +6,8 @@ class SoilMoisture extends DomObject {
 
     async soilMoisture() {
 
+        console.log('Start test soilMoisture()');
+
         await this.click(science.soilMoisture, commonActions.showInstructions);
 
         await this.switchToNewWindow();

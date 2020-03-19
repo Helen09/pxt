@@ -6,6 +6,8 @@ class LEDs extends DomObject {
 
     async leds() {
 
+        console.log('Start test leds()');
+
         await this.click(behindTheMakeCodeHardware.leds,behindTheMakeCodeHardware.playVideo);
 
         await this.switchToNewWindow();

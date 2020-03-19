@@ -6,6 +6,8 @@ class SparkFunVideos extends DomObject {
 
     async sparkFunVideos() {
 
+        console.log('Start test sparkFunVideos()');
+
         await this.click(courses.sparkFunVideos, commonActions.showInstructions);
 
         await this.switchToNewWindow();

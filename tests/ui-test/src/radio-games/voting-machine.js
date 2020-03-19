@@ -6,6 +6,8 @@ class VotingMachine extends DomObject {
 
     async votingMachine() {
 
+        console.log('Start test votingMachine()');
+
         await this.click(radioGames.votingMachine, commonActions.showInstructions);
 
         await this.switchToNewWindow();

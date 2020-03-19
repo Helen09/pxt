@@ -6,6 +6,8 @@ class CoinFlipper extends DomObject {
 
     async coinFlipper() {
 
+        console.log('Start test coinFlipper()');
+
         await this.click(games.coinFlipper, commonActions.startTutorial);
 
         let headerTitle = await this.getText(commonActions.headerTitle);

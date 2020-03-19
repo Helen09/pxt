@@ -1,12 +1,14 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { codingCards} = require('../lib/css-value');
+let { codingCards, commonActions} = require('../lib/css-value');
 
 class SpriteBasedGames extends DomObject {
 
     async spriteBasedGames() {
 
-        await this.click(codingCards.spriteBasedGames,codingCards.showInstructions);
+        console.log('Start test spriteBasedGames()');
+
+        await this.click(codingCards.spriteBasedGames,commonActions.showInstructions);
 
         await this.switchToNewWindow();
         

@@ -6,6 +6,8 @@ class WritingCode extends DomObject {
 
     async writingCode() {
 
+        console.log('Start test writingCode()');
+
         await this.click(blocksToJavaScript.writingCode,commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);

@@ -6,6 +6,8 @@ class LoveMeter extends DomObject {
 
     async loveMeter() {
 
+        console.log('Start test loveMeter()');
+        
         await this.click(tutorials.loveMeter, commonActions.startTutorial);
 
         let headerTitle = await this.getText(commonActions.headerTitle);

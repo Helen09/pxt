@@ -1,12 +1,14 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { codingCards} = require('../lib/css-value');
+let { codingCards, commonActions} = require('../lib/css-value');
 
 class Zen extends DomObject {
 
     async zen() {
 
-        await this.click(codingCards.zen,codingCards.showInstructions);
+        console.log('Start test zen()');
+
+        await this.click(codingCards.zen,commonActions.showInstructions);
 
         await this.switchToNewWindow();
         

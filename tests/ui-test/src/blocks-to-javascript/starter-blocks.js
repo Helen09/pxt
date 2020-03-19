@@ -6,6 +6,8 @@ class StarterBlocks extends DomObject {
 
     async starterBlocks() {
 
+        console.log('Start test starterBlocks()');
+
         await this.click(blocksToJavaScript.starterBlocks,commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);

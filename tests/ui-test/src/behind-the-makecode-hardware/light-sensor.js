@@ -6,6 +6,8 @@ class LightSensor extends DomObject {
 
     async lightSensor() {
 
+        console.log('Start test lightSensor()');
+
         await this.click(behindTheMakeCodeHardware.lightSensor,behindTheMakeCodeHardware.playVideo);
 
         await this.switchToNewWindow();

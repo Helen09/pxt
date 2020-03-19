@@ -4,22 +4,9 @@ let { dragBlocks, commonActions } = require('../lib/css-value');
 
 class BlocklyToolBox extends DomObject {
 
-    async searchBox() {
-
-        console.debug('Start testSearchBox()');
-
-        await this.sendKeys(dragBlocks.searchBox, 'Basic');
-
-        await driver.sleep(2000);
-
-        let searchText = await this.getText(dragBlocks.searchLabel);
-
-        assert.equal(searchText, "7 result matching 'basic'");
-
-        console.debug(`This is the blockly search label: ${searchText}`);
-
-    }
     async dragBlocks() {
+
+        console.log('Start test dragBlocks()');
 
         let target = await this.getRect(dragBlocks.foreverBlock);
 
@@ -85,10 +72,6 @@ class BlocklyToolBox extends DomObject {
     }
 }
     test() {
-        it('Get various blocks', async () => {
-            return await this.searchBox();
-        });
-
         it('Drag and drop blocks', async () => {
             return await this.dragBlocks();
         });

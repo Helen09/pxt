@@ -6,6 +6,8 @@ class MicroCoin extends DomObject {
 
     async microCoin() {
 
+        console.log('Start test microCoin()');
+
         await this.click(radioGames.microCoin, commonActions.showInstructions);
 
         await this.switchToNewWindow();

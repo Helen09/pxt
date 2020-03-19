@@ -1,12 +1,14 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { codingCards} = require('../lib/css-value');
+let { codingCards, commonActions} = require('../lib/css-value');
 
 class ShakeTheBottle extends DomObject {
 
     async shakeTheBottle() {
 
-        await this.click(codingCards.shakeTheBottle,codingCards.showInstructions);
+        console.log('Start test shakeTheBottle()');
+
+        await this.click(codingCards.shakeTheBottle,commonActions.showInstructions);
 
         await this.switchToNewWindow();
         

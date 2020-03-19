@@ -6,6 +6,8 @@ class NameBadge extends DomObject {
 
     async nameBadge() {
 
+        console.log('Start test nameBadge()');
+
         await this.click(fashion.nameBadge, commonActions.showInstructions);
 
         await this.switchToNewWindow();

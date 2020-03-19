@@ -1,12 +1,14 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { codingCards} = require('../lib/css-value');
+let { codingCards, commonActions} = require('../lib/css-value');
 
 class Reaction extends DomObject {
 
     async reaction() {
 
-        await this.click(codingCards.reaction,codingCards.showInstructions);
+        console.log('Start test reaction()');
+
+        await this.click(codingCards.reaction,commonActions.showInstructions);
 
         await this.switchToNewWindow();
         

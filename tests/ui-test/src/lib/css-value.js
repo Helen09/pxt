@@ -29,14 +29,13 @@ exports.helpOfProject = {
     support: '[aria-label="Dropdown menu Help"] [title="Support"]',
     reference: '[aria-label="Dropdown menu Help"] [title="Reference"]',
     blocks: '[aria-label="Dropdown menu Help"] [title="Blocks"]',
-    javascript: '[aria-label="Dropdown menu Help"] [title="JavaScript"]',
     hardware: '[aria-label="Dropdown menu Help"] [title="Hardware"]',
     buy: '[aria-label="Dropdown menu Help"] [title="Buy"]',
     collapseButton: '#sidedocstoggle',
     goBackButton: '#sidedocs-back-button',
     openLinkButton: '#sidedocsbar',
     headerTitleOfSupport:'h2.hide-in-mobile',
-    headerTitleOfBuy:'.alpha'
+    headerTitleOfBuy:'h1.Typography-module--h1--1FZqC'
 }
 
 exports.moreOfProject = {
@@ -100,13 +99,13 @@ exports.dragBlocks = {
 }
 
 exports.tutorials = {
-    flashingHeart: '[aria-label="Flashing Heart"]',
-    nameTag: '[aria-label="Name Tag"]',
-    smileyButtons: '[aria-label="Smiley Buttons"]',
-    dice: '[aria-label="Dice"]',
-    loveMeter: '[aria-label="Love Meter"]',
-    microChat: '[aria-label="Micro Chat"]',
-    tutorialHint:'.avatar-image',
+    flashingHeart: '[aria-label="Tutorials"] [aria-label="Flashing Heart"]',
+    nameTag: '[aria-label="Tutorials"] [aria-label="Name Tag"]',
+    smileyButtons: '[aria-label="Tutorials"] [aria-label="Smiley Buttons"]',
+    dice: '[aria-label="Tutorials"] [aria-label="Dice"]',
+    loveMeter: '[aria-label="Tutorials"] [aria-label="Love Meter"]',
+    microChat: '[aria-label="Tutorials"] [aria-label="Micro Chat"]',
+    tutorialHint:'.hintbutton',
     showHint:'.tutorialhint',
     hiddenHint:'.tutorialhint.hidden',
     basicBlocks:'div.blocklyTreeRow',
@@ -115,104 +114,104 @@ exports.tutorials = {
 }
 
 exports.games = {
-    rockPaperScissors: '[aria-label="Rock Paper Scissors"]',
-    coinFlipper: '[aria-label="Coin Flipper"]',
-    reactionTime: '[aria-label="Reaction Time"]',
-    magicButtonTrick: '[aria-label="Magic Button Trick"]',
-    snapTheDot: '[aria-label="Snap the dot"]',
-    salute: '[aria-label="Salute!"]',
-    karelTheLed: '[aria-label="Karel the LED"]',
-    crashyBird: '[aria-label="Crashy bird"]'
+    rockPaperScissors: '[aria-label="Games"] [aria-label="Rock Paper Scissors"]',
+    coinFlipper: '[aria-label="Games"] [aria-label="Coin Flipper"]',
+    reactionTime: '[aria-label="Games"] [aria-label="Reaction Time"]',
+    magicButtonTrick: '[aria-label="Games"] [aria-label="Magic Button Trick"]',
+    snapTheDot: '[aria-label="Games"] [aria-label="Snap the dot"]',
+    salute: '[aria-label="Games"] [aria-label="Salute!"]',
+    karelTheLed: '[aria-label="Games"] [aria-label="Karel the LED"]',
+    crashyBird: '[aria-label="Games"] [aria-label="Crashy bird"]'
 }
 
 exports.radioGames = {
-    multiDice:'[aria-label="Multi Dice"]',
-    moodRadio:'[aria-label="Mood Radio"]',
-    telePotato:'[aria-label="Tele-potato"]',
-    fireFlies:'[aria-label="Fireflies"]',
-    hotOrCold:'[aria-label="Hot or Cold"]',
-    redLightGreenLight:'[aria-label="Red Light Green Light"]',
-    votingMachine:'[aria-label="Voting Machine"]',
-    rockPaperScissorsTeams:'[aria-label="Rock Paper Scissors Teams"]',
-    microCoin:'[aria-label="Micro:Coin"]',
-    infection:'[aria-label="Infection"]',
-    bestFriends:'[aria-label="Best Friends"]'
+    multiDice:'[aria-label="Radio Games"] [aria-label="Multi Dice"]',
+    moodRadio:'[aria-label="Radio Games"] [aria-label="Mood Radio"]',
+    telePotato:'[aria-label="Radio Games"] [aria-label="Tele-potato"]',
+    fireFlies:'[aria-label="Radio Games"] [aria-label="Fireflies"]',
+    hotOrCold:'[aria-label="Radio Games"] [aria-label="Hot or Cold"]',
+    redLightGreenLight:'[aria-label="Radio Games"] [aria-label="Red Light Green Light"]',
+    votingMachine:'[aria-label="Radio Games"] [aria-label="Voting Machine"]',
+    rockPaperScissorsTeams:'[aria-label="Radio Games"] [aria-label="Rock Paper Scissors Teams"]',
+    microCoin:'[aria-label="Radio Games"] [aria-label="Micro:Coin"]',
+    infection:'[aria-label="Radio Games"] [aria-label="Infection"]',
+    bestFriends:'[aria-label="Radio Games"] [aria-label="Best Friends"]'
 }
     
 exports.fashion = {
-    ductTapeWallet:'[aria-label="Duct Tape Wallet"]',
-    watch: '[aria-label="Watch"]',
-    stopWatch:'[aria-label="Stopwatch"]',
-    stepCounter:'[aria-label="Step counter"]',
-    ductTapeWatch:'[aria-label="Duct Tape Watch"]',
-    nameBadge:'[aria-label="Name badge"]'
+    ductTapeWallet:'[aria-label="Fashion"] [aria-label="Duct Tape Wallet"]',
+    watch: '[aria-label="Fashion"] [aria-label="Watch"]',
+    stopWatch:'[aria-label="Fashion"] [aria-label="Stopwatch"]',
+    stepCounter:'[aria-label="Fashion"] [aria-label="Step counter"]',
+    ductTapeWatch:'[aria-label="Fashion"] [aria-label="Duct Tape Watch"]',
+    nameBadge:'[aria-label="Fashion"] [aria-label="Name badge"]'
 }
 
 exports.music = {
-    hackYourHeadphones:'[aria-label="Hack Your Headphones"]',
-    bananaKeyboard:'[aria-label="Banana Keyboard"]',
-    guitar:'[aria-label="Guitar"]'
+    hackYourHeadphones:'[aria-label="Music"] [aria-label="Hack Your Headphones"]',
+    bananaKeyboard:'[aria-label="Music"] [aria-label="Banana Keyboard"]',
+    guitar:'[aria-label="Music"] [aria-label="Guitar"]'
 }
 
 exports.toys = {
-    inchworm:'[aria-label="Inchworm"]',
-    milkCartonRobot:'[aria-label="Milk Carton Robot"]',
-    robotUnicorn:'[aria-label="Robot Unicorn"]',
-    milkMonster:'[aria-label="Milky Monster"]',
-    railwayCrossing:'[aria-label="Railway Crossing"]',
-    kitronikRCCarHack:'[aria-label="Kitronik RC Car Hack"]',
-    rotaryDialRadio:'[aria-label="Rotary Dial Radio"]'
+    inchworm:'[aria-label="Toys"] [aria-label="Inchworm"]',
+    milkCartonRobot:'[aria-label="Toys"] [aria-label="Milk Carton Robot"]',
+    robotUnicorn:'[aria-label="Toys"] [aria-label="Robot Unicorn"]',
+    milkMonster:'[aria-label="Toys"] [aria-label="Milky Monster"]',
+    railwayCrossing:'[aria-label="Toys"] [aria-label="Railway Crossing"]',
+    kitronikRCCarHack:'[aria-label="Toys"] [aria-label="Kitronik RC Car Hack"]',
+    rotaryDialRadio:'[aria-label="Toys"] [aria-label="Rotary Dial Radio"]'
 }
 
 exports.science = {
-    timingGates:'[aria-label="Timing Gates"]',
-    soilMoisture:'[aria-label="Soil Moisture"]',
-    plantWatering:'[aria-label="Plant Watering"]',
-    statesOfMatter:'[aria-label="States of Matter"]'
+    timingGates:'[aria-label="Science"] [aria-label="Timing Gates"]',
+    soilMoisture:'[aria-label="Science"] [aria-label="Soil Moisture"]',
+    plantWatering:'[aria-label="Science"] [aria-label="Plant Watering"]',
+    statesOfMatter:'[aria-label="Science"] [aria-label="States of Matter"]'
 }
 
 exports.tools = {
-    plotAcceleration:'[aria-label="Plot Acceleration"]',
-    lightLevelMeter:'[aria-label="Light Level Meter"]',
-    analogPinTester:'[aria-label="Analog Pin Tester"]',
-    servoCalibrator:'[aria-label="Servo Calibrator"]',
-    radioBridge:'[aria-label="Radio Bridge"]',
-    openExample:'.actions .positive'
+    plotAcceleration:'[aria-label="Tools"] [aria-label="Plot Acceleration"]',
+    lightLevelMeter:'[aria-label="Tools"] [aria-label="Light Level Meter"]',
+    analogPinTester:'[aria-label="Tools"] [aria-label="Analog Pin Tester"]',
+    servoCalibrator:'[aria-label="Tools"] [aria-label="Servo Calibrator"]',
+    radioBridge:'[aria-label="Tools"] [aria-label="Radio Bridge"]',
+    openExample:'.card-action'
 }
 
 exports.turtle = {
-    square:'[aria-label="Square"]',
-    spiral:'[aria-label="Spiral"]',
-    scanner:'[aria-label="Scanner"]'
+    square:'[aria-label="Turtle"] [aria-label="Square"]',
+    spiral:'[aria-label="Turtle"] [aria-label="Spiral"]',
+    scanner:'[aria-label="Turtle"] [aria-label="Scanner"]'
 }
 
 exports.blocksToJavaScript = {
-    helloJavaScript:'[aria-label="Hello JavaScript"]',
-    starterBlocks:'[aria-label="Starter Blocks"]',
-    writingCode:'[aria-label="Writing Code"]',
-    complexConditionals:'[aria-label="Complex Conditionals"]',
-    conditionalLoops:'[aria-label="Conditional Loops"]',
-    commandResponder:'[aria-label="Command Responder"]',
-    writingFunctions:'[aria-label="Writing Functions"]',
+    helloJavaScript:'[aria-label="Blocks To JavaScript"] [aria-label="Hello JavaScript"]',
+    starterBlocks:'[aria-label="Blocks To JavaScript"] [aria-label="Starter Blocks"]',
+    writingCode:'[aria-label="Blocks To JavaScript"] [aria-label="Writing Code"]',
+    complexConditionals:'[aria-label="Blocks To JavaScript"] [aria-label="Complex Conditionals"]',
+    conditionalLoops:'[aria-label="Blocks To JavaScript"] [aria-label="Conditional Loops"]',
+    commandResponder:'[aria-label="Blocks To JavaScript"] [aria-label="Command Responder"]',
+    writingFunctions:'[aria-label="Blocks To JavaScript"] [aria-label="Writing Functions"]',
     seeMoreButton:'[aria-label="Blocks To JavaScript"] [aria-label="See more"]'
 }
 
 exports.courses = {
-    introToCsOnline:'[aria-label="Intro to CS Online"]',
-    introToCsClassroom:'[aria-label="Intro to CS Classroom"]',
-    scienceExperiments:'[aria-label="Science Experiments"]',
-    learnAllAboutMicrobit:'[aria-label="Learn All About micro:bit"]',
-    codingAndInnovation:'[aria-label="Coding and Innovation"]',
-    discoverJavaScriptBlocks:'[aria-label="Discover JavaScript Blocks"]',
-    pageTitleOfDiscover:'.page_title:nth-child(2) .alpha',
-    networkingWithTheMicrobit:'[aria-label="Networking with the micro:bit"]',
-    sparkFunVideos:'[aria-label="SparkFun Videos"]',
-    logicLab:'[aria-label="Logic Lab"]',
-    blocksToJavaScript:'[aria-label="Blocks to JavaScript"]',
-    sparkFunInventorsKit:'[aria-label="SparkFun Inventor\'s Kit"]',
-    kitronikInventorKit:'[aria-label="Kitronik Inventor Kit"]',
-    microbitOfThings:'[aria-label="micro:bit of Things"]',
-    azRobotics:'[aria-label="A-Z Robotics"]',
+    introToCsOnline:'[aria-label="Courses"] [aria-label="Intro to CS Online"]',
+    introToCsClassroom:'[aria-label="Courses"] [aria-label="Intro to CS Classroom"]',
+    scienceExperiments:'[aria-label="Courses"] [aria-label="Science Experiments"]',
+    learnAllAboutMicrobit:'[aria-label="Courses"] [aria-label="Learn All About micro:bit"]',
+    codingAndInnovation:'[aria-label="Courses"] [aria-label="Coding and Innovation"]',
+    discoverJavaScriptBlocks:'[aria-label="Courses"] [aria-label="Discover JavaScript Blocks"]',
+    pageTitleOfDiscover:'.Typography-module--h1--1FZqC.FilterAside-module--title--ds64o',
+    networkingWithTheMicrobit:'[aria-label="Courses"] [aria-label="Networking with the micro:bit"]',
+    sparkFunVideos:'[aria-label="Courses"] [aria-label="SparkFun Videos"]',
+    logicLab:'[aria-label="Courses"] [aria-label="Logic Lab"]',
+    blocksToJavaScript:'[aria-label="Courses"] [aria-label="Blocks to JavaScript"]',
+    sparkFunInventorsKit:'[aria-label="Courses"] [aria-label="SparkFun Inventor\'s Kit"]',
+    kitronikInventorKit:'[aria-label="Courses"] [aria-label="Kitronik Inventor Kit"]',
+    microbitOfThings:'[aria-label="Courses"] [aria-label="micro:bit of Things"]',
+    azRobotics:'[aria-label="Courses"] [aria-label="A-Z Robotics"]',
     firstjpg:'.WYuW0e.GZwC2b.dPmH0b',
     goBackButton:'[role="toolbar"] [aria-label="Close"]',
     codingAndInnovationTitle:'.zfr3Q.duRjpb',
@@ -222,15 +221,15 @@ exports.courses = {
     courseTitle:'.course-title'
 }
 exports.behindTheMakeCodeHardware ={
-    leds:'[aria-label="LEDs"]',
-    buttons:'[aria-label="Buttons"]',
-    accelerometer:'[aria-label="Accelerometer"]',
-    lightSensor:'[aria-label="Light Sensor"]',
-    temperatureSensor:'[aria-label="Temperature Sensor"]',
-    pinPressed:'[aria-label="Pin Pressed"]',
-    radio:'[aria-label="Radio"]',
-    servoMotor:'[aria-label="Servo Motor"]',
-    speakers:'[aria-label="Speakers"]',
+    leds:'[aria-label="Behind the MakeCode Hardware"] [aria-label="LEDs"]',
+    buttons:'[aria-label="Behind the MakeCode Hardware"] [aria-label="Buttons"]',
+    accelerometer:'[aria-label="Behind the MakeCode Hardware"] [aria-label="Accelerometer"]',
+    lightSensor:'[aria-label="Behind the MakeCode Hardware"] [aria-label="Light Sensor"]',
+    temperatureSensor:'[aria-label="Behind the MakeCode Hardware"] [aria-label="Temperature Sensor"]',
+    pinPressed:'[aria-label="Behind the MakeCode Hardware"] [aria-label="Pin Pressed"]',
+    radio:'[aria-label="Behind the MakeCode Hardware"] [aria-label="Radio"]',
+    servoMotor:'[aria-label="Behind the MakeCode Hardware"] [aria-label="Servo Motor"]',
+    speakers:'[aria-label="Behind the MakeCode Hardware"] [aria-label="Speakers"]',
     playVideo:'[title="Open link in new window"]',
     videoTitle:'h1 .style-scope.ytd-video-primary-info-renderer'
 }
@@ -245,19 +244,30 @@ exports.importProject = {
     signInButton:'[type="submit"]'
 }
 exports.codingCards={
-    makeADigitalBalance:'[aria-label="Make a Digital Balance"]',
-    makeADigitalDice:'[aria-label="Make a Digital Dice"]',
-    makeATrundleWheel:'[aria-label="Make a Trundle Wheel"]',
-    nervous:'[aria-label="Nervous"]',
-    reaction:'[aria-label="Reaction"]',
-    shakeTheBottle:'[aria-label="Shake the Bottle"]',
-    spriteBasedGames:'[aria-label="Sprite Based Games"]',
-    zen:'[aria-label="Zen"]',
-    showInstructions:'.card-action'
+    makeADigitalBalance:'[aria-label="Coding Cards"] [aria-label="Make a Digital Balance"]',
+    makeADigitalDice:'[aria-label="Coding Cards"] [aria-label="Make a Digital Dice"]',
+    makeATrundleWheel:'[aria-label="Coding Cards"] [aria-label="Make a Trundle Wheel"]',
+    nervous:'[aria-label="Coding Cards"] [aria-label="Nervous"]',
+    reaction:'[aria-label="Coding Cards"] [aria-label="Reaction"]',
+    shakeTheBottle:'[aria-label="Coding Cards"] [aria-label="Shake the Bottle"]',
+    spriteBasedGames:'[aria-label="Coding Cards"] [aria-label="Sprite Based Games"]',
+    zen:'[aria-label="Coding Cards"] [aria-label="Zen"]',
+}
+exports.scienceExperiments = {
+    dataCollection:'[aria-label="Science Experiments"] [aria-label="Data Collection"]',
+    populationTraitCounter:'[aria-label="Science Experiments"] [aria-label="Population Trait Counter"]',
+    temperatureSensor:'[aria-label="Science Experiments"] [aria-label="Temperature Sensor"]',
+    soilMoistureSensor:'[aria-label="Science Experiments"] [aria-label="Soil Moisture Sensor"]',
+    EMGMuscleSensor:'[aria-label="Science Experiments"] [aria-label="EMG Muscle Sensor"]',
+    eggDrop:'[aria-label="Science Experiments"] [aria-label="Egg Drop"]',
+    batteryTester:'[aria-label="Science Experiments"] [aria-label="Battery Tester"]',
+    rocketAcceleration:'[aria-label="Science Experiments"] [aria-label="Rocket Acceleration"]',
+    playVideo:'[title="Open link in new window"]',
+    videoTitle:'h1 .style-scope.ytd-video-primary-info-renderer'
 }
 exports.commonActions = {
     startTutorial: '.actions button',
-    showInstructions: '.actions .positive',
+    showInstructions:'.card-action',
     playButton: '.video',
     videoPlay: '[aria-label="Play"]',
     videoTitle: '.yt-uix-sessionlink',

@@ -6,6 +6,8 @@ class StatesOfMatter extends DomObject {
 
     async statesOfMatter() {
 
+        console.log('Start test statesOfMatter()');
+
         await this.click(science.statesOfMatter, commonActions.showInstructions);
 
         await this.switchToNewWindow();

@@ -6,6 +6,8 @@ class ServoMotor extends DomObject {
 
     async servoMotor() {
 
+        console.log('Start test servoMotor()');
+
         await this.click(behindTheMakeCodeHardware.servoMotor,behindTheMakeCodeHardware.playVideo);
 
         await this.switchToNewWindow();

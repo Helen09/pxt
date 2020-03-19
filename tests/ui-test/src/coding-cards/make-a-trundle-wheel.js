@@ -1,12 +1,14 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { codingCards} = require('../lib/css-value');
+let { codingCards, commonActions} = require('../lib/css-value');
 
 class MakeATrundleWheel extends DomObject {
 
     async makeATrundleWheel() {
 
-        await this.click(codingCards.makeATrundleWheel,codingCards.showInstructions);
+        console.log('Start test makeATrundleWheel()');
+
+        await this.click(codingCards.makeATrundleWheel,commonActions.showInstructions);
 
         await this.switchToNewWindow();
         

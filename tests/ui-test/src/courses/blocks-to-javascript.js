@@ -6,6 +6,8 @@ class BlocksToJavaScript extends DomObject {
 
     async blocksToJavaScript() {
 
+        console.log('Start test blocksToJavaScript()');
+
         await this.click(courses.blocksToJavaScript, commonActions.showInstructions);
 
         await this.switchToNewWindow();

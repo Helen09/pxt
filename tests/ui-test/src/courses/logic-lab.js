@@ -6,6 +6,8 @@ class LogicLab extends DomObject {
 
     async logicLab() {
 
+        console.log('Start test logicLab()');
+
         await this.click(courses.logicLab, commonActions.showInstructions);
 
         await this.switchToNewWindow();

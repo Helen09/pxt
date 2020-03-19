@@ -6,6 +6,8 @@ class MicrobitOfThings extends DomObject {
 
     async microbitOfThings() {
 
+        console.log('Start test microbitOfThings()');
+
         await this.click(courses.microbitOfThings, commonActions.showInstructions);
 
         await this.switchToNewWindow();

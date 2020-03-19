@@ -6,6 +6,8 @@ let {importProject, commonActions} = require('../lib/css-value');
 class ImportMyProject extends DomObject{
     async importMyProject(){
 
+        console.log('Start test importProject()');
+        
         await this.click(importProject.importButton, importProject.importFile);
 
         let importFileTitle = await this.getText(commonActions.headerTitle);

@@ -6,6 +6,8 @@ class LearnAllAboutMicrobit extends DomObject {
 
     async learnAllAboutMicrobit() {
 
+        console.log('Start test learnAllAboutMicrobit()');
+
         await this.click(courses.learnAllAboutMicrobit, commonActions.showInstructions);
 
         await this.switchToNewWindow();

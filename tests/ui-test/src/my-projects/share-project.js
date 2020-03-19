@@ -6,7 +6,7 @@ class ShareProject extends DomObject {
 
     async shareProject() {
 
-        console.debug("Start testShareProject()");
+        console.log("Start test shareProject()");
 
         await this.click(shareTheProject.openProject,shareTheProject.shareButton);
 

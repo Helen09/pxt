@@ -6,6 +6,8 @@ class AnalogPinTester extends DomObject {
 
     async analogPinTester() {
 
+        console.log('Start test analogPinTester()');
+
         await this.click(tools.analogPinTester, commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);

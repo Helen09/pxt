@@ -6,6 +6,8 @@ class KitronikInventorsKit extends DomObject {
 
     async kitronikInventorsKit() {
 
+        console.log('Start test kitronikInventorsKit()');
+
         await this.click(courses.kitronikInventorKit, commonActions.showInstructions);
 
         await this.switchToNewWindow();

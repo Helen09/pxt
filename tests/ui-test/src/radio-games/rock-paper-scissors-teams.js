@@ -6,6 +6,8 @@ class RockPaperScissorsTeams extends DomObject {
 
     async rockPaperScissorsTeams() {
 
+        console.log('Start test rockPaperScissorsTeams()');
+
         await this.click(radioGames.rockPaperScissorsTeams, commonActions.showInstructions);
 
         await this.switchToNewWindow();

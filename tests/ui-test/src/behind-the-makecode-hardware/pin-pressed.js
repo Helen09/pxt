@@ -6,6 +6,8 @@ class PinPressed extends DomObject {
 
     async pinPressed() {
 
+        console.log('Start test pinPressed()');
+
         await this.click(behindTheMakeCodeHardware.pinPressed,behindTheMakeCodeHardware.playVideo);
 
         await this.switchToNewWindow();

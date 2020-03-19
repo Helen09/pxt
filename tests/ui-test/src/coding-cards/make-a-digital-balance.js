@@ -1,12 +1,14 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { codingCards} = require('../lib/css-value');
+let { codingCards,commonActions} = require('../lib/css-value');
 
 class MakeADigitalBalance extends DomObject {
 
     async makeADigitalBalance() {
 
-        await this.click(codingCards.makeADigitalBalance,codingCards.showInstructions);
+        console.log('Start test makeADigitalBalance()');
+
+        await this.click(codingCards.makeADigitalBalance,commonActions.showInstructions);
 
         await this.switchToNewWindow();
         

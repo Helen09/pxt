@@ -6,6 +6,8 @@ class CodingAndInnovation extends DomObject {
 
     async codingAndInnovation() {
 
+        console.log('Start test codingAndInnovation()');
+
         await this.click(courses.codingAndInnovation, commonActions.showInstructions);
 
         await this.switchToNewWindow();

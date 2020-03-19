@@ -6,6 +6,8 @@ class AZRobotics extends DomObject {
 
     async azRobotics() {
 
+        console.log('Start test azRobotics()');
+
         await this.click(courses.azRobotics, commonActions.showInstructions);
 
         await this.switchToNewWindow();

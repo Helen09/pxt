@@ -6,7 +6,7 @@ class GetMoreList extends DomObject {
 
     async moreList() {
 
-        console.debug('Start testMoreList()');
+        console.log('Start test moreList()');
 
         for (let i = 1; i < 4; i++) {
 
@@ -25,6 +25,12 @@ class GetMoreList extends DomObject {
 
                 await this.sendKeys(moreOfProject.nameInputBoxInSettings, 'Fortest');
 
+                let newProjectName = await this.getAttribute(moreOfProject.nameInputBoxInSettings, "value");
+                
+                assert.equal(newProjectName, 'Fortest');
+
+                console.log(`This is the new name of the project: ${newProjectName}`);
+
                 await this.click(moreOfProject.saveButtonInSettings);
             }
             if (i == 3) {
@@ -40,16 +46,23 @@ class GetMoreList extends DomObject {
         
         console.debug(`This is the first extension name:${extensionHeader}`);
 
-        await this.click(moreOfProject.goBackButtonInExtensions, moreOfProject.moreButton, moreOfProject.deleteOption);
+        await this.click(moreOfProject.goBackButtonInExtensions, moreOfProject.moreButton, moreOfProject.pairDevice);
 
-        let deleteTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
+        let pairDeviceTitle = await this.getText(commonActions.headerTitle);
+        
+        assert.equal(pairDeviceTitle, 'Pair device for one-click downloads');
+        
+        console.debug(`The title of pair device is :${pairDeviceTitle}`);
+
+        await this.click(moreOfProject.closeButton,moreOfProject.moreButton, moreOfProject.deleteOption);
+
+        let deleteTitle = await this.getText(commonActions.headerTitle);
         
         assert.equal(deleteTitle, "Would you like to delete 'Fortest'?");
         
         console.debug(`This is the alert of delete project:${deleteTitle}`);
 
-        await this.click(moreOfProject.cancelButton, moreOfProject.moreButton, moreOfProject.reportAbuse,
-            moreOfProject.cancelButton, moreOfProject.moreButton, moreOfProject.languageOption);
+        await this.click(moreOfProject.cancelButton, moreOfProject.moreButton, moreOfProject.languageOption);
 
         let languageHeader = await this.getText(commonActions.headerTitle);
         
@@ -79,15 +92,9 @@ class GetMoreList extends DomObject {
 
         await this.catchScreenShot('GreenBackground');
 
-        await this.click(moreOfProject.moreButton, moreOfProject.pairDevice);
-
-        let pairDeviceTitle = await this.getText(commonActions.headerTitle);
-        
-        assert.equal(pairDeviceTitle, 'Pair device for one-click downloads');
-        
-        console.log(pairDeviceTitle);
-
-        await this.click(moreOfProject.closeButton, moreOfProject.moreButton, moreOfProject.aboutOption, moreOfProject.okButtonOfAbout);
+        await this.click(moreOfProject.moreButton, moreOfProject.reportAbuse,moreOfProject.closeButton);
+    
+        await this.click(moreOfProject.moreButton, moreOfProject.aboutOption, moreOfProject.okButtonOfAbout);
 
         await this.click(moreOfProject.moreButton, moreOfProject.resetOption);
 

@@ -6,6 +6,8 @@ class TemperatureSensor extends DomObject {
 
     async temperatureSensor() {
 
+        console.log('Start test temperatureSensor()');
+
         await this.click(behindTheMakeCodeHardware.temperatureSensor,behindTheMakeCodeHardware.playVideo);
 
         await this.switchToNewWindow();

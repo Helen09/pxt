@@ -6,7 +6,7 @@ class GetHelpList extends DomObject {
 
     async helpList() {
 
-        console.debug('Start testHelpList()');
+        console.log('Start test helpList()');
 
         await this.click(helpOfProject.helpButton, helpOfProject.support);
 
@@ -42,6 +42,42 @@ class GetHelpList extends DomObject {
 
         await this.closeCurrentWindow();
 
+        await this.click(helpOfProject.helpButton, helpOfProject.hardware);
+
+        await this.switchToIframe(commonActions.idOfIframe);
+
+        let deviceTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
+
+        assert.equal(deviceTitle, 'Device');
+
+        console.debug(`The side docs toggle text is: ${deviceTitle}`);
+
+        await this.switchToDefaultFrame();
+
+        await this.click(helpOfProject.openLinkButton);
+
+        await this.switchToNewWindow();
+
+        let pageTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
+
+        assert.equal(pageTitle, 'Device');
+
+        console.debug(`The title of new page is: ${newPageTitle}`);
+
+        await this.closeCurrentWindow();
+
+        await this.click(helpOfProject.helpButton, helpOfProject.buy);
+
+        await this.switchToNewWindow();
+
+        let headerOfBuyPage = await this.getText(helpOfProject.headerTitleOfBuy);
+
+        assert.equal(headerOfBuyPage, 'Buy the micro:bit');
+
+        console.debug(`The header of buy page is: ${headerOfBuyPage}`);
+
+        await this.closeCurrentWindow();
+
         await this.click(helpOfProject.helpButton, helpOfProject.blocks);
 
         await this.switchToIframe(commonActions.idOfIframe);
@@ -52,45 +88,15 @@ class GetHelpList extends DomObject {
 
         console.debug(`The side docs toggle text is: ${blocksTitle}`);
 
+        // await this.click(helpOfProject.goBackButton);
+
+        // let goBackResult = await this.getText(commonActions.titleOfNewOpenedWindow);
+
+        // assert.notEqual(goBackResult, 'Blocks language');
+
         await this.switchToDefaultFrame();
 
         await this.click(helpOfProject.collapseButton);
-
-        await this.click(helpOfProject.helpButton, helpOfProject.javascript);
-
-        await this.switchToIframe(commonActions.idOfIframe);
-
-        let javascriptTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
-
-        assert.equal(javascriptTitle, 'JavaScript');
-
-        console.debug(`The side docs toggle text is: ${javascriptTitle}`);
-
-        await this.switchToDefaultFrame();
-
-        await this.click(helpOfProject.helpButton, helpOfProject.hardware);
-
-        await this.switchToIframe(commonActions.idOfIframe);
-
-        await this.click(helpOfProject.goBackButton);
-
-        let goBackResult = await this.getText(commonActions.titleOfNewOpenedWindow);
-
-        assert.notEqual(goBackResult, 'Device');
-
-        await this.switchToDefaultFrame();
-
-        await this.click(helpOfProject.helpButton, helpOfProject.buy);
-
-        await this.switchToNewWindow();
-
-        let headerOfBuyPage = await this.getText(helpOfProject.headerTitleOfBuy);
-
-        assert.equal(headerOfBuyPage, 'Where to buy the BBC micro:bit and BBC micro:bit accessories');
-
-        console.debug(`The header of buy page is: ${headerOfBuyPage}`);
-
-        await this.closeCurrentWindow();
 
     }
 

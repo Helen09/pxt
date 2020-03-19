@@ -6,6 +6,8 @@ class MultiDice extends DomObject {
 
     async multiDice() {
 
+        console.log('Start test multiDice()');
+
         await this.click(radioGames.multiDice, commonActions.startTutorial);
 
         let headerTitle = await this.getText(commonActions.headerTitle);

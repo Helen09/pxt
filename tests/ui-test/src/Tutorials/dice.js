@@ -6,6 +6,8 @@ class Dice extends DomObject {
 
     async dice() {
 
+        console.log('Start test dice()');
+
         await this.click(tutorials.dice, commonActions.startTutorial);
 
         let headerTitle = await this.getText(commonActions.headerTitle);
@@ -17,7 +19,7 @@ class Dice extends DomObject {
         await this.click(tutorials.tutorialHint);
 
         let hiddenHintValue = await this.getAttribute(tutorials.hiddenHint, 'class');
-        assert.equal(hiddenHintValue, 'tutorialhint Hidden');
+        assert.equal(hiddenHintValue, 'tutorialhint hidden');
 
         await this.click(tutorials.tutorialHint);
         let showHintValue = await this.getAttribute(tutorials.showHint, 'class');

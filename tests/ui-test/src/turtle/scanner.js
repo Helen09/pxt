@@ -6,6 +6,8 @@ class Scanner extends DomObject {
 
     async scanner() {
 
+        console.log('Start test scanner()');
+
         await this.click(turtle.scanner, commonActions.showInstructions);
 
         await driver.sleep(2000);

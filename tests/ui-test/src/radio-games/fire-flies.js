@@ -6,6 +6,8 @@ class FireFlies extends DomObject {
 
     async fireFlies() {
 
+        console.log('Start test fireFlies()');
+
         await this.click(radioGames.fireFlies, commonActions.showInstructions);
 
         await this.switchToNewWindow();

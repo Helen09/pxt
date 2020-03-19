@@ -1,14 +1,12 @@
 import { DomObject } from '../lib/dom-object';
 import assert from 'assert';
-import { editorTools } from '../lib/css-value';
+import { editorTools, commonActions } from '../lib/css-value';
 
 class EditorToolBar extends DomObject {
 
-    async ToolBar() {
+    async editorToolBar() {
 
-        console.debug('Start testMenuBar()');
-
-        await driver.sleep(2000);
+        console.log('Start test menuBar()');
 
         await this.click(editorTools.toggleCategoryAdvanced, editorTools.collapseButton, editorTools.downloadButton);
 
@@ -40,7 +38,7 @@ class EditorToolBar extends DomObject {
 
     test() {
         it('Look up the toolBar', async () => {
-            return await this.ToolBar();
+            return await this.editorToolBar();
         });
     }
 }

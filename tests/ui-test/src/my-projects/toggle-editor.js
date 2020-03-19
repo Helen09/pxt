@@ -6,7 +6,7 @@ class ToggleDisplayForm extends DomObject {
 
     async toggleDisplayForm() {
 
-        console.debug("Start testToggleDisplayForm()");
+        console.log("Start test toggleDisplayForm()");
 
         await this.click(switchButton.switchToJavaScript);
 

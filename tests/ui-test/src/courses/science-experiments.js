@@ -6,6 +6,8 @@ class ScienceExperiments extends DomObject {
 
     async scienceExperiments() {
 
+        console.log('Start test scienceExperiments()');
+
         await this.click(courses.scienceExperiments, commonActions.showInstructions);
 
         await this.switchToNewWindow();

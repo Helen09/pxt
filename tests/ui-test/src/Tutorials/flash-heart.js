@@ -5,7 +5,8 @@ let { tutorials, commonActions } = require('../lib/css-value');
 class FlashingHeart extends DomObject {
 
     async flashingHeart() {
-        
+        console.log('Start test flashingHeart()');
+
         await this.click(tutorials.flashingHeart, commonActions.startTutorial);
 
         let headerTitle = await this.getText(commonActions.headerTitle);
@@ -17,7 +18,7 @@ class FlashingHeart extends DomObject {
         await this.click(tutorials.tutorialHint);
 
         let hiddenHintValue = await this.getAttribute(tutorials.hiddenHint, 'class');
-        assert.equal(hiddenHintValue, 'tutorialhint Hidden');
+        assert.equal(hiddenHintValue, 'tutorialhint hidden');
 
         await this.click(tutorials.tutorialHint);
         let showHintValue = await this.getAttribute(tutorials.showHint, 'class');

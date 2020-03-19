@@ -6,6 +6,8 @@ class HelloJavaScript extends DomObject {
 
     async helloJavaScript() {
 
+        console.log('Start test helloJavaScript()');
+
         await this.click(blocksToJavaScript.helloJavaScript,commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);

@@ -6,6 +6,8 @@ class IntroToCsClassroom extends DomObject {
 
     async introToCsClassroom() {
 
+        console.log('Start test introToCsClassroom()');
+
         await this.click(courses.introToCsClassroom, commonActions.showInstructions);
 
         await this.switchToNewWindow();

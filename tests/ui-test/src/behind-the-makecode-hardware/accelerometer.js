@@ -6,6 +6,8 @@ class Accelerometer extends DomObject {
 
     async accelerometer() {
 
+        console.log('Start test accelerometer()');
+
         await this.click(behindTheMakeCodeHardware.accelerometer,behindTheMakeCodeHardware.playVideo);
 
         await this.switchToNewWindow();

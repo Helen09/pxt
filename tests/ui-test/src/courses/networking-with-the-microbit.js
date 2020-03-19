@@ -6,6 +6,8 @@ class NetworkingWithTheMicrobit extends DomObject {
 
     async networkingWithTheMicrobit() {
 
+        console.log('Start test networkingWithTheMicrobit()');
+
         await this.click(courses.networkingWithTheMicrobit, commonActions.showInstructions);
 
         await this.switchToNewWindow();

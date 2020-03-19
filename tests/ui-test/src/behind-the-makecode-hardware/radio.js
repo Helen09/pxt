@@ -6,6 +6,8 @@ class Radio extends DomObject {
 
     async radio() {
 
+        console.log('Start test radio()');
+
         await this.click(behindTheMakeCodeHardware.radio,behindTheMakeCodeHardware.playVideo);
 
         await this.switchToNewWindow();

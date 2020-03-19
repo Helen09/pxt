@@ -6,6 +6,8 @@ class MilkCartonRobot extends DomObject {
 
     async milkCartonRobot() {
 
+        console.log('Start test milkCartonRobot()');
+
         await this.click(toys.milkCartonRobot, commonActions.showInstructions);
 
         await this.switchToNewWindow();

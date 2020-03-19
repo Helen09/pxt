@@ -6,6 +6,8 @@ class Speakers extends DomObject {
 
     async speakers() {
 
+        console.log('Start test speakers()');
+
         await this.click(behindTheMakeCodeHardware.speakers,behindTheMakeCodeHardware.playVideo);
 
         await this.switchToNewWindow();

@@ -6,6 +6,8 @@ class Buttons extends DomObject {
 
     async buttons() {
 
+        console.log('Start test buttons()');
+
         await this.click(behindTheMakeCodeHardware.buttons,behindTheMakeCodeHardware.playVideo);
 
         await this.switchToNewWindow();

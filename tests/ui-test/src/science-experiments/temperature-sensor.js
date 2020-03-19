@@ -4,7 +4,7 @@ let { scienceExperiments} = require('../lib/css-value');
 
 class TemperatureSensor extends DomObject {
 
-    async temperatureSensor() {
+    async _temperatureSensor() {
 
         console.log('Start test temperatureSensor()');
         
@@ -25,9 +25,9 @@ class TemperatureSensor extends DomObject {
 
     test() {
         it('Start learning the "TemperatureSensor"', async () => {
-            return await this.temperatureSensor();
+            return await this._temperatureSensor();
         });
     }
 
 }
-export let temperatureSensor = new TemperatureSensor();
+export let _temperatureSensor = new TemperatureSensor();
