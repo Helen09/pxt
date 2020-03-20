@@ -7,9 +7,6 @@ class WritingFunctions extends DomObject {
     async writingFunctions() {
 
         console.log('Start test writingFunctions()');
-
-        //fix error
-        await driver.sleep(1000);
         
         await this.click(blocksToJavaScript.writingFunctions,commonActions.showInstructions);
 

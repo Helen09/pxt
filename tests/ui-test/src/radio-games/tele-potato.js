@@ -10,8 +10,6 @@ class TelePotato extends DomObject {
 
         await this.click(radioGames.telePotato, commonActions.showInstructions);
 
-        await driver.sleep(3000);
-
         await this.switchToIframe(commonActions.idOfIframe);
 
         try {

@@ -7,9 +7,7 @@ class Salute extends DomObject {
     async salute() {
 
         console.log('Start test salute()');
-        //fix error
-        await driver.sleep(1000);
-        
+
         await this.click(games.salute, commonActions.showInstructions);
 
         await this.switchToNewWindow();

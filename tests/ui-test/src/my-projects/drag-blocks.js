@@ -8,13 +8,15 @@ class BlocklyToolBox extends DomObject {
 
         console.log('Start test dragBlocks()');
 
+        await this.click(dragBlocks.basicItem);
+
         let target = await this.getRect(dragBlocks.foreverBlock);
 
-        let start = await this.getRect(dragBlocks.sayHelloBlock);
+        let start = await this.getRect(dragBlocks.showStringBlock);
 
         let xOffSet = Math.ceil(target.x - start.x);
         let yOffSet = Math.ceil(target.y - start.y + target.height / 2);
-        await this.dragAndDropByCoordinate(dragBlocks.sayHelloBlock, xOffSet, yOffSet);
+        await this.dragAndDropByCoordinate(dragBlocks.showStringBlock, xOffSet, yOffSet);
 
         await this.click(dragBlocks.basicItem);
 

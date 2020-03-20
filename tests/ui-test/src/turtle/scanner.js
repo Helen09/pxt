@@ -10,7 +10,6 @@ class Scanner extends DomObject {
 
         await this.click(turtle.scanner, commonActions.showInstructions);
 
-        await driver.sleep(2000);
         await this.switchToIframe(commonActions.idOfIframe);
         
         let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);

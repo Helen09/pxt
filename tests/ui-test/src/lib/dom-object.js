@@ -6,22 +6,6 @@ import dateformat from 'dateformat';
 
 export class DomObject {
 
-    // async actionForAll(actionName, findBys) {
-    //     for (let criteria of findBys) {
-    //         if (criteria) {
-    //             // console.debug(`Try to click the element by criteria: ${criteria}`);
-    //             // let findBy = this.findBy(criteria);
-    //             //wait until the element can be located
-    //             let element = await this.waitforElementLocated(criteria);
-
-    //             //Sleep for 2 seconds to make sure the element's state is stable for interactions
-    //             // await driver.sleep(2000);
-
-    //             await element[actionName]();
-    //         }
-    //     }
-    //     return true;
-    // }
     async waitforElementLocated(criteria) {
         let findBy = this.findBy(criteria);
         return await driver.wait(until.elementLocated(findBy));
@@ -143,7 +127,7 @@ export class DomObject {
         for(let criteria of findBys){
             if(criteria){
                 let element = await this.waitforElementLocated(criteria);
-                //  await driver.sleep(2000);
+                await driver.sleep(1000);
                 await element['click']();
             }
         }

@@ -7,8 +7,6 @@ class MicroChat extends DomObject {
     async microChat() {
 
         console.log('Start test microChat()');
-        //fix error
-        await driver.sleep(1000);
         
         await this.click(tutorials.microChat, commonActions.startTutorial);
 
