@@ -6,6 +6,8 @@ class RadioBridge extends DomObject {
 
     async radioBridge() {
 
+        console.log('Start test radioBridge()');
+
         await this.click(tools.radioBridge, tools.openExample);
 
         let projectName = await this.getAttribute(commonActions.projectName,'value');

@@ -6,6 +6,8 @@ class PlotAcceleration extends DomObject {
 
     async plotAcceleration() {
 
+        console.log('Start test plotAcceleration()');
+
         await this.click(tools.plotAcceleration, commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);

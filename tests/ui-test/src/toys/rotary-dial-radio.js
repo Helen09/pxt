@@ -6,6 +6,8 @@ class RotaryDialRadio extends DomObject {
 
     async rotaryDialRadio() {
 
+        console.log('Start test rotaryDialRadio()');
+
         await this.click(toys.rotaryDialRadio, commonActions.showInstructions);
 
         await this.switchToNewWindow();

@@ -6,6 +6,8 @@ class RobotUnicorn extends DomObject {
 
     async robotUnicorn() {
 
+        console.log('Start test robotUnicorn()');
+
         await this.click(toys.robotUnicorn, commonActions.showInstructions);
 
         await this.switchToNewWindow();

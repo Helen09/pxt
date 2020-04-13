@@ -6,6 +6,8 @@ class MicroChat extends DomObject {
 
     async microChat() {
 
+        console.log('Start test microChat()');
+        
         await this.click(tutorials.microChat, commonActions.startTutorial);
 
         let headerTitle = await this.getText(commonActions.headerTitle);

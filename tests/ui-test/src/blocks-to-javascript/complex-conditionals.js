@@ -6,6 +6,8 @@ class ComplexConditionals extends DomObject {
 
     async complexConditionals() {
 
+        console.log('Start test complexConditionals()');
+
         await this.click(blocksToJavaScript.complexConditionals,commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);

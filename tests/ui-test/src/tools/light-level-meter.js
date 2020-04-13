@@ -6,6 +6,8 @@ class LightLevelMeter extends DomObject {
 
     async lightLevelMeter() {
 
+        console.log('Start test lightLevelMeter()');
+
         await this.click(tools.lightLevelMeter, commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);

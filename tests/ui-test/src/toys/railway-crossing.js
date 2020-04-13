@@ -6,6 +6,8 @@ class RailwayCrossing extends DomObject {
 
     async railwayCrossing() {
 
+        console.log('Start test railwayCrossing()');
+
         await this.click(toys.railwayCrossing, commonActions.showInstructions);
 
         await this.switchToNewWindow();

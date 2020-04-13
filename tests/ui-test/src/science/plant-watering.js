@@ -6,6 +6,8 @@ class PlantWatering extends DomObject {
 
     async plantWatering() {
 
+        console.log('Start test plantWatering()');
+
         await this.click(science.plantWatering, commonActions.showInstructions);
 
         await this.switchToNewWindow();

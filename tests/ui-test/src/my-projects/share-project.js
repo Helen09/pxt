@@ -6,9 +6,11 @@ class ShareProject extends DomObject {
 
     async shareProject() {
 
-        await this.click(shareTheProject.shareButton);
+        console.log("Start test shareProject()");
 
-        let publishIconText = await this.getText(commonActions.titleOfNewOpenedWindow);
+        await this.click(shareTheProject.openProject,shareTheProject.shareButton);
+
+        let publishIconText = await this.getText(shareTheProject.titleOfPublishButton);
 
         assert.equal(publishIconText, 'Publish project');
 

@@ -6,6 +6,8 @@ class KarelTheLed extends DomObject {
 
     async karelTheLed() {
 
+        console.log('Start test karelTheLed()');
+
         await this.click(games.karelTheLed, commonActions.showInstructions);
 
         await this.switchToNewWindow();

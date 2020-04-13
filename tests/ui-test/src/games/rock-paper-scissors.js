@@ -6,6 +6,8 @@ class RockPaperScissors extends DomObject {
 
     async rockPaperScissors() {
 
+        console.log('Start test rockPaperScissors()');
+
         await this.click(games.rockPaperScissors, commonActions.startTutorial);
         
         let headerTitle = await this.getText(commonActions.headerTitle);

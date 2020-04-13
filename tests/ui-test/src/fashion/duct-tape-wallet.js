@@ -6,6 +6,8 @@ class DuctTapeWallet extends DomObject {
 
     async ductTapeWallet() {
 
+        console.log('Start test ductTapeWallet()');
+
         await this.click(fashion.ductTapeWallet, commonActions.showInstructions);
 
         await this.switchToNewWindow();

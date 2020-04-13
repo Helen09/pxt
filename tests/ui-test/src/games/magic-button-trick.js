@@ -6,6 +6,8 @@ class MagicButtonTrick extends DomObject {
 
     async magicButtonTrick() {
 
+        console.log('Start test magicButtonTrick()');
+
         await this.click(games.magicButtonTrick, commonActions.showInstructions);
 
         await this.switchToNewWindow();

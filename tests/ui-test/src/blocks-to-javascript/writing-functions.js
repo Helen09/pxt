@@ -6,6 +6,8 @@ class WritingFunctions extends DomObject {
 
     async writingFunctions() {
 
+        console.log('Start test writingFunctions()');
+        
         await this.click(blocksToJavaScript.writingFunctions,commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);

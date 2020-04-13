@@ -6,6 +6,8 @@ class BestFriends extends DomObject {
 
     async bestFriends() {
 
+        console.log('Start test bestFriends()');
+
         await this.click(radioGames.bestFriends, commonActions.showInstructions);
 
         await this.switchToNewWindow();

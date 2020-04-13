@@ -6,6 +6,8 @@ class NameTag extends DomObject {
 
     async nameTag() {
 
+        console.log('Start test nameTag()');
+
         await this.click(tutorials.nameTag, commonActions.startTutorial);
 
         let headerTitle = await this.getText(commonActions.headerTitle);
@@ -13,6 +15,16 @@ class NameTag extends DomObject {
         console.debug(`The title of the current window is "${headerTitle}"`);
        
         await this.click(commonActions.okButton);
+
+        await this.click(tutorials.tutorialHint);
+
+        let showHintValue = await this.getAttribute(tutorials.showHint, 'class');
+        assert.equal(showHintValue, 'tutorialhint ');
+
+        await this.click(tutorials.tutorialHint);
+        
+        let hiddenHintValue = await this.getAttribute(tutorials.hiddenHint, 'class');
+        assert.equal(hiddenHintValue, 'tutorialhint hidden');
 
         for (let i = 1; i < 4; i++) {
 
@@ -23,9 +35,22 @@ class NameTag extends DomObject {
 
             let selectLabel = await this.getAttribute(commonActions.selectedLabel, 'aria-label');
             console.log(selectLabel);
+            
+            if(i==3){
+                
+                await this.click(tutorials.basicBlocks);
+
+                let target = await this.getRect(tutorials.foreverBlock);
+
+                let start = await this.getRect(tutorials.showLeds);
+
+                let xOffSet = Math.ceil(target.x - start.x);
+                let yOffSet = Math.ceil(target.y - start.y + target.height / 2);
+                await this.dragAndDropByCoordinate(tutorials.showLeds, xOffSet, yOffSet);
+            }
         }
 
-        await this.click(commonActions.okButton,commonActions.finishButton);
+        await this.click(commonActions.finishButton);
 
         let projectName = await this.getAttribute(commonActions.projectName, 'value');
         assert.equal(projectName, 'Name Tag');

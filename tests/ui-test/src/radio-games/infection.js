@@ -6,6 +6,8 @@ class Infection extends DomObject {
 
     async infection() {
 
+        console.log('Start test infection()');
+
         await this.click(radioGames.infection, commonActions.showInstructions);
 
         await this.switchToNewWindow();

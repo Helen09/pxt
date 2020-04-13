@@ -6,6 +6,8 @@ class ServoCalibrator extends DomObject {
 
     async servoCalibrator() {
 
+        console.log('Start test servoCalibrator()');
+
         await this.click(tools.servoCalibrator, commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);

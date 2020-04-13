@@ -6,6 +6,8 @@ class SnapTheDot extends DomObject {
 
     async snapTheDot() {
 
+        console.log('Start test snapTheDot()');
+
         await this.click(games.snapTheDot, commonActions.startTutorial); 
        
         let headerTitle = await this.getText(commonActions.headerTitle);
@@ -14,7 +16,7 @@ class SnapTheDot extends DomObject {
      
         await this.click(commonActions.okButton);
 
-        for (let i = 1; i < 7; i++) {
+        for (let i = 1; i < 8; i++) {
 
             await this.click(commonActions.goNextButton);
             let cssValueOfSelectLabel = await this.getAttribute(commonActions.selectedLabel, 'class');

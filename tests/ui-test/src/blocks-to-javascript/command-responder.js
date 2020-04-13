@@ -6,6 +6,8 @@ class CommandResponder extends DomObject {
 
     async commandResponder() {
 
+        console.log('Start test commandResponder()');
+
         await this.click(blocksToJavaScript.commandResponder,commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);

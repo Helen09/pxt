@@ -6,9 +6,9 @@ class TelePotato extends DomObject {
 
     async telePotato() {
 
-        await this.click(radioGames.telePotato, commonActions.showInstructions);
+        console.log('Start test telePotato()');
 
-        await driver.sleep(3000);
+        await this.click(radioGames.telePotato, commonActions.showInstructions);
 
         await this.switchToIframe(commonActions.idOfIframe);
 

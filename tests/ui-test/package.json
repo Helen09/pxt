@@ -4,7 +4,7 @@
   "description": "fortest",
   "main": "Main.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha ./src/index.js --require @babel/register --require @babel/polyfill --timeout 100000"
+    "test": "node_modules/.bin/mocha ./src/my-projects/index.js --require @babel/register --require @babel/polyfill --timeout 100000"
   },
   "type": "module",
   "author": "Helen Ma",
@@ -12,15 +12,15 @@
   "dependencies": {
     "chromedriver": "^2.46.0",
     "dateformat": "^3.0.3",
-    "selenium-webdriver": "^4.0.0-alpha.1"
+    "selenium-webdriver": "^4.0.0-alpha.7"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/polyfill": "^7.4.4",
-    "@babel/preset-env": "^7.4.5",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
     "@babel/preset-es2015": "^7.0.0-beta.53",
-    "@babel/register": "^7.4.4",
+    "@babel/register": "^7.8.6",
     "mocha": "^6.1.4"
   }
 }

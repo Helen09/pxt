@@ -6,31 +6,26 @@ class Salute extends DomObject {
 
     async salute() {
 
+        console.log('Start test salute()');
+
         await this.click(games.salute, commonActions.showInstructions);
 
         await this.switchToNewWindow();
         
-        try {
-            let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
-            assert.equal(headerTitle, 'Salute!');
-            console.debug(`The title of the current page is "${headerTitle}"`);
+        let headerTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
+        assert.equal(headerTitle, 'Salute!');
+        console.debug(`The title of the current page is "${headerTitle}"`);
 
-            await this.click(commonActions.playButton);
+        await this.click(commonActions.playButton);
 
-            await this.switchToIframe('.embed iframe');
-    
-            await this.click(commonActions.videoPlay);
+        await this.switchToIframe('.embed iframe');
 
-            let videoTitle = await this.getText(commonActions.videoTitle);
-            assert.equal(videoTitle, 'How to Play Salute!');
-            console.debug(`The video title is "${videoTitle}"`);
+        await this.click(commonActions.videoPlay);
 
-        } catch (error) {
+        let videoTitle = await this.getText(commonActions.videoTitle);
+        assert.equal(videoTitle, 'How to Play Salute!');
+        console.debug(`The video title is "${videoTitle}"`);
 
-            console.error(error);
-            
-        }
-        
         await this.closeCurrentWindow();
 
         await this.click(commonActions.closeButton);
