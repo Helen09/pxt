@@ -7,16 +7,21 @@ import dateformat from 'dateformat';
 export class DomObject {
 
     async waitforElementLocated(criteria) {
-        let findBy = this.findBy(criteria);
-        return await driver.wait(until.elementLocated(findBy));
+        return await driver.wait(until.elementLocated(By.css(criteria)));
         
     }
 
-    findBy(criteria) {
-        if (typeof criteria === 'string') {
-            return By.css(criteria);
-        }
-        return criteria;
+    async getCurrentUrl(){
+        return await driver.getCurrentUrl();
+    }
+    async getAlertText(){
+        let alert = await driver.switchTo().alert();
+        return alert.getText();
+    }
+
+    async acceptAlert(){
+        let alert = await driver.switchTo().alert();
+        return alert.accept();
     }
 
     async backNavigation() {
@@ -46,7 +51,7 @@ export class DomObject {
         let actions = driver.actions();
 
         let origin = await this.waitforElementLocated(criteria);
-        let goal = await this.waitforElementLocated(criteria);
+        let goal = await this.waitforElementLocated(criteria2);
 
         return actions.dragAndDrop(origin, goal).perform();
     }
@@ -103,6 +108,10 @@ export class DomObject {
         return element.getText();
     }
 
+    async getTextByXpath(criteria){
+        let element = await driver.findElement(By.xpath(criteria));
+        return element.getText();
+    }
     async getAttribute(criteria, attributeName) {
         let element = await this.waitforElementLocated(criteria);
         return element.getAttribute(attributeName);
@@ -110,9 +119,9 @@ export class DomObject {
 
     async sendKeys(criteria, keys) {
 
-        let element = await driver.findElement(this.findBy(criteria));
+        let element = await this.waitforElementLocated(criteria);
 
-        if (element !== null) {
+        if (element !== "") {
 
             element.clear();
             element.sendKeys(keys);
