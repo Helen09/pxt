@@ -4,6 +4,7 @@ let { dragBlocks, commonActions } = require('../lib/css-value');
 
 class BlocklyToolBox extends DomObject {
 
+
     async dragBlocks() {
 
         console.log('Start test dragBlocks()');
@@ -22,57 +23,52 @@ class BlocklyToolBox extends DomObject {
 
         await this.dragAndDropByElement(dragBlocks.showStringBlock, dragBlocks.trashArea);
 
-        for (let i = 1; i < 5; i++) {
+        await this.contextClick(dragBlocks.insertBlock1);
+            
+        await this.click(dragBlocks.duplicateOptionOfInsertBlock);
 
-            await this.contextClick(dragBlocks.insertBlock);
+        let classValueOfDuplication = await this.getAttribute(dragBlocks.duplicateBlock, 'class');
 
-            if (i == 1) {
+        assert.equal(classValueOfDuplication, 'blocklyDraggable blocklySelected blocklyDisabled');
 
-                await this.click(dragBlocks.duplicateOptionOfInsertBlock);
+        console.log(`This is the class value of duplication:${classValueOfDuplication}`);
 
-                let classValueOfDuplication = await this.getAttribute(dragBlocks.duplicateBlock, 'class');
+        await this.contextClick(dragBlocks.duplicateBlock);
 
-                assert.equal(classValueOfDuplication, 'blocklyDraggable blocklySelected blocklyDisabled');
+        await this.click(dragBlocks.deleteDuplicateBlock);
+        
+        await this.contextClick(dragBlocks.insertBlock2);
 
-                console.log(`This is the class value of duplication:${classValueOfDuplication}`);
+        await this.click(dragBlocks.addComment);
 
-                await this.contextClick(dragBlocks.duplicateBlock);
+        await this.sendKeys(dragBlocks.textBox, 'fortest');
 
-                await this.click(dragBlocks.deleteDuplicateBlock);
-            }
-            if (i == 2) {
+        await this.click(dragBlocks.commentDeleteButton);
 
-                await this.click(dragBlocks.addComment);
+        await this.contextClick(dragBlocks.insertBlock2);
+        
+        await this.click(dragBlocks.helpOptionOfInsertBlock);
 
-                await this.sendKeys(dragBlocks.textBox, 'fortest');
+        await this.switchToIframe(commonActions.idOfIframe);
 
-                await this.click(dragBlocks.commentDeleteButton);
-            }
-            if (i == 3) {
+        let sideDocsTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
 
-                await this.click(dragBlocks.helpOptionOfInsertBlock);
+        await this.switchToDefaultFrame();
 
-                await this.switchToIframe(commonActions.idOfIframe);
+        assert.equal(sideDocsTitle, 'Show String');
+        
+        console.info(`The side docs title is ${sideDocsTitle}`);
 
-                let sideDocsTitle = await this.getText(commonActions.titleOfNewOpenedWindow);
+        await this.click(dragBlocks.collapseButton);
+        // await this.acceptAlert();
+           
+        await this.click(dragBlocks.fullScreenButton);
 
-                await this.switchToDefaultFrame();
+        await this.catchScreenShot('LaunchInFullScreen');
 
-                assert.equal(sideDocsTitle, 'Show String');
-                
-                console.info(`The side docs title is ${sideDocsTitle}`);
-
-                await this.click(dragBlocks.collapseButton);
-            }
-            if (i == 4) {
-                await this.click(dragBlocks.deleteInsertBlock, dragBlocks.fullScreenButton);
-
-                await this.catchScreenShot('LaunchInFullScreen');
-
-                await this.click(dragBlocks.exitFullScreen, dragBlocks.microbitLogo);
-        }
+        await this.click(dragBlocks.exitFullScreen, dragBlocks.microbitLogo);
+            
     }
-}
     test() {
         it('Drag and drop blocks', async () => {
             return await this.dragBlocks();
