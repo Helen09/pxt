@@ -1,10 +1,42 @@
 exports.newProject = {
     newProjectButton: '.newprojectcard',
+    projectName:'#projectNameInput',
     homeOfProject: '.openproject',
     closeButtonOfHomePage: '.closeIcon',
     inputProjectName: 'input#projectNameInput',
     saveButtonOfHomePage: '.button.positive',
+    skipButton:'.actions button:nth-child(2)',
     projectTitle: "[aria-label='My Projects'] .carouselitem:nth-child(2) .header",
+    codeOptions:'.expandable-menu a',
+    selectBox:'select.ui.dropdown',
+    pythonOnly:'select [value="python-only"]',
+    javaScriptOnly:'select [value="javascript-only"]',
+    isSelect:'aria-selected',
+    itemLabel:'aria-label',
+    centerItem:'div.item.centered',
+    viewAllButton:'.view-all-button',
+    emptyTips:'.sub.header',
+    goBackButton:'.header-close [title="Go back"]',
+    UntitledProject:'.ui.cards [aria-label="Untitled"]',
+    openProject:'[title="Open Project"]',
+    dropdownButton:'[role="combobox"]',
+    openNewTab:'[title="Open Project in a new tab"]',
+    duplicateSelectedProject:'[title="Duplicate Project"]',
+    deleteSelectedProject:'[title="Delete Project"]',
+    turnToListView:'[title="List view"]',
+    turnToGridView:'[title="Grid view"]',
+    sortByName:'[title="Sort by Name descending"]',
+    sortByModify:'[title="Sort by Last Modified descending"]',
+    selectAllProjects:'th[title="Select all projects"]',
+    selectProjects:'.collapsing',
+    firstProjectName:'tr:nth-child(1) td:nth-child(2)',
+    ifSelect:'tbody tr:nth-child(1)',
+    searchBox:'input[role="search"]',
+    searchButton:'[title="Search"]',
+    editorUrl:'https://makecode.microbit.org/beta#',
+    project1:'.ui.cards [aria-label="Project1"]',
+    dupProject1:'.ui.cards [aria-label="Project1 #2"]',
+    deleteButton:'.actions .red',
 }
 
 exports.shareTheProject = {
@@ -21,7 +53,11 @@ exports.shareTheProject = {
 exports.switchButton = {
     switchToJavaScript: '[title="Convert code to JavaScript"]',
     titleOfExplorer: '[aria-label="File explorer toolbar"]',
-    switchToBlocks: '[title="Convert code to Blocks"]'
+    switchToBlocks: '[title="Convert code to Blocks"]',
+    dropDownMenu:'[title="Select code editor language"]',
+    switchToPython:'[aria-label="Convert code to Python"]',
+    pythonSrc1:'.view-lines .view-line:nth-child(1) .mtk6',
+    textArea:'.view-lines'
 }
 
 exports.helpOfProject = {
@@ -35,7 +71,7 @@ exports.helpOfProject = {
     goBackButton: '#sidedocs-back-button',
     openLinkButton: '#sidedocsbar',
     headerTitleOfSupport:'h2.hide-in-mobile',
-    headerTitleOfBuy:'h1.Typography-module--h1--1FZqC'
+    headerTitleOfBuy:'//div/h1[contains(@class,"Typography")]',
 }
 
 exports.moreOfProject = {
@@ -78,12 +114,12 @@ exports.editorTools = {
 exports.dragBlocks = {
     searchBox: '.blocklySearchInputField',
     searchLabel: '[id="blocklySearchLabel"]',
-    foreverBlock: 'g.blocklyDraggable:nth-child(2)',
-    sayHelloBlock: 'g.blocklyDraggable:nth-child(4)',
+    foreverBlock: '.blocklySvg g:nth-child(4)',
+    showStringBlock: 'svg:nth-child(6) .blocklyBlockCanvas g:nth-child(10) >path',
     basicItem: '[aria-label="Toggle category Basic"]',
-    showStringBlock: 'g.blocklyDraggable:nth-child(8)[data-shapes="stack"]',
     trashArea: 'div.blocklyToolboxDiv',
-    insertBlock: 'g.blocklyDraggable:nth-child(2)',
+    insertBlock1: '.blocklySvg g:nth-child(4) .blocklyDraggable > path',
+    insertBlock2:'.blocklyBlockCanvas g:nth-child(4) .blocklyDraggable > path',
     duplicateOptionOfInsertBlock: '.goog-menuitem:nth-child(1)',
     duplicateBlock: '.blocklySelected.blocklyDisabled',
     deleteDuplicateBlock: '.goog-menuitem:nth-child(3)',
@@ -109,8 +145,8 @@ exports.tutorials = {
     showHint:'.tutorialhint',
     hiddenHint:'.tutorialhint.hidden',
     basicBlocks:'div.blocklyTreeRow',
-    showLeds:'.blocklyFlyout g.blocklyDraggable:nth-child(2)',
-    foreverBlock:'g.blocklyDraggable:nth-child(2)'
+    showLeds:'svg:nth-child(7) g:nth-child(4) path',
+    foreverBlock:'svg.blocklySvg g:nth-child(4) path'
 }
 
 exports.games = {
@@ -203,7 +239,7 @@ exports.courses = {
     learnAllAboutMicrobit:'[aria-label="Courses"] [aria-label="Learn All About micro:bit"]',
     codingAndInnovation:'[aria-label="Courses"] [aria-label="Coding and Innovation"]',
     discoverJavaScriptBlocks:'[aria-label="Courses"] [aria-label="Discover JavaScript Blocks"]',
-    pageTitleOfDiscover:'.Typography-module--h1--1FZqC.FilterAside-module--title--ds64o',
+    pageTitleOfDiscover:'//div/h1[contains(@class,"Typography")]',
     networkingWithTheMicrobit:'[aria-label="Courses"] [aria-label="Networking with the micro:bit"]',
     sparkFunVideos:'[aria-label="Courses"] [aria-label="SparkFun Videos"]',
     logicLab:'[aria-label="Courses"] [aria-label="Logic Lab"]',
