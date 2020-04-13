@@ -7,12 +7,14 @@ class EditorToolBar extends DomObject {
     async editorToolBar() {
 
         console.log('Start test menuBar()');
-
+        //fix error
+        
+        await driver.sleep(1000);
         await this.click(editorTools.toggleCategoryAdvanced, editorTools.collapseButton, editorTools.downloadButton);
 
         let downloadTitle = await this.getText(editorTools.headerTitle);
 
-        assert.equal(downloadTitle, 'Download to your micro:bit');
+        assert.equal(downloadTitle, 'Download completed...');
 
         console.debug(`This is the title of download button:${downloadTitle}`);
 

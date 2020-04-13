@@ -62,7 +62,7 @@ class GetHelpList extends DomObject {
 
         assert.equal(pageTitle, 'Device');
 
-        console.debug(`The title of new page is: ${newPageTitle}`);
+        console.debug(`The title of new page is: ${pageTitle}`);
 
         await this.closeCurrentWindow();
 
@@ -70,12 +70,12 @@ class GetHelpList extends DomObject {
 
         await this.switchToNewWindow();
 
-        let headerOfBuyPage = await this.getText(helpOfProject.headerTitleOfBuy);
+        let headerOfBuyPage = await this.getTextByXpath(helpOfProject.headerTitleOfBuy);
 
         assert.equal(headerOfBuyPage, 'Buy the micro:bit');
 
         console.debug(`The header of buy page is: ${headerOfBuyPage}`);
-
+        
         await this.closeCurrentWindow();
 
         await this.click(helpOfProject.helpButton, helpOfProject.blocks);
@@ -87,12 +87,6 @@ class GetHelpList extends DomObject {
         assert.equal(blocksTitle, 'Blocks language');
 
         console.debug(`The side docs toggle text is: ${blocksTitle}`);
-
-        // await this.click(helpOfProject.goBackButton);
-
-        // let goBackResult = await this.getText(commonActions.titleOfNewOpenedWindow);
-
-        // assert.notEqual(goBackResult, 'Blocks language');
 
         await this.switchToDefaultFrame();
 
