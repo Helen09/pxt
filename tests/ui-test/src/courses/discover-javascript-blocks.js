@@ -12,7 +12,7 @@ class DiscoverJavaScriptBlocks extends DomObject {
 
         await this.switchToNewWindow();
 
-        let headerTitle = await this.getText(courses.pageTitleOfDiscover);
+        let headerTitle = await this.getTextByXpath(courses.pageTitleOfDiscover);
         assert.equal(headerTitle, 'Make it: code it');
         console.debug(`The header of the new page is "${headerTitle}"`);
 

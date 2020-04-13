@@ -35,9 +35,10 @@ class FlashingHeart extends DomObject {
             console.log(selectLabel);
 
             if(i==3){
+                await this.click(tutorials.basicBlocks);
+
                 let target = await this.getRect(tutorials.foreverBlock);
 
-                await this.click(tutorials.basicBlocks);
                 let start = await this.getRect(tutorials.showLeds);
 
                 let xOffSet = Math.ceil(target.x - start.x);

@@ -18,12 +18,13 @@ class SmileyButtons extends DomObject {
 
         await this.click(tutorials.tutorialHint);
 
-        let hiddenHintValue = await this.getAttribute(tutorials.hiddenHint, 'class');
-        assert.equal(hiddenHintValue, 'tutorialhint hidden');
-
-        await this.click(tutorials.tutorialHint);
         let showHintValue = await this.getAttribute(tutorials.showHint, 'class');
         assert.equal(showHintValue, 'tutorialhint ');
+        
+        await this.click(tutorials.tutorialHint);
+
+        let hiddenHintValue = await this.getAttribute(tutorials.hiddenHint, 'class');
+        assert.equal(hiddenHintValue, 'tutorialhint hidden');
 
         for (let i = 1; i < 6; i++) {
 

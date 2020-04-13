@@ -16,7 +16,7 @@ class SnapTheDot extends DomObject {
      
         await this.click(commonActions.okButton);
 
-        for (let i = 1; i < 7; i++) {
+        for (let i = 1; i < 8; i++) {
 
             await this.click(commonActions.goNextButton);
             let cssValueOfSelectLabel = await this.getAttribute(commonActions.selectedLabel, 'class');

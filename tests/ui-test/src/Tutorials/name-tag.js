@@ -18,12 +18,13 @@ class NameTag extends DomObject {
 
         await this.click(tutorials.tutorialHint);
 
-        let hiddenHintValue = await this.getAttribute(tutorials.hiddenHint, 'class');
-        assert.equal(hiddenHintValue, 'tutorialhint hidden');
-
-        await this.click(tutorials.tutorialHint);
         let showHintValue = await this.getAttribute(tutorials.showHint, 'class');
         assert.equal(showHintValue, 'tutorialhint ');
+
+        await this.click(tutorials.tutorialHint);
+        
+        let hiddenHintValue = await this.getAttribute(tutorials.hiddenHint, 'class');
+        assert.equal(hiddenHintValue, 'tutorialhint hidden');
 
         for (let i = 1; i < 4; i++) {
 
@@ -36,11 +37,11 @@ class NameTag extends DomObject {
             console.log(selectLabel);
             
             if(i==3){
-                await this.click(commonActions.okButton);
+                
+                await this.click(tutorials.basicBlocks);
 
                 let target = await this.getRect(tutorials.foreverBlock);
 
-                await this.click(tutorials.basicBlocks);
                 let start = await this.getRect(tutorials.showLeds);
 
                 let xOffSet = Math.ceil(target.x - start.x);
