@@ -37,6 +37,7 @@ exports.newProject = {
     project1:'.ui.cards [aria-label="Project1"]',
     dupProject1:'.ui.cards [aria-label="Project1 #2"]',
     deleteButton:'.actions .red',
+    deleteContent:'.content p'
 }
 
 exports.shareTheProject = {
@@ -146,18 +147,25 @@ exports.tutorials = {
     hiddenHint:'.tutorialhint.hidden',
     basicBlocks:'div.blocklyTreeRow',
     showLeds:'svg:nth-child(7) g:nth-child(4) path',
-    foreverBlock:'svg.blocklySvg g:nth-child(4) path'
+    foreverBlock:'svg.blocklySvg g:nth-child(4) path',
+    seeMoreButton: '[aria-label="Tutorials"] [aria-label="See more"]',
 }
 
 exports.games = {
     rockPaperScissors: '[aria-label="Games"] [aria-label="Rock Paper Scissors"]',
     coinFlipper: '[aria-label="Games"] [aria-label="Coin Flipper"]',
+    sevenSecounds:'[aria-label="Games"] [aria-label="7 seconds"]',
+    hotPotato:'[aria-label="Games"] [aria-label="Hot Potato"]',
+    headsGuess:'[aria-label="Games"] [aria-label="Heads Guess!"]',
     reactionTime: '[aria-label="Games"] [aria-label="Reaction Time"]',
+    tugOfLed:'[aria-label="Games"] [aria-label="Tug-Of-LED"]',
     magicButtonTrick: '[aria-label="Games"] [aria-label="Magic Button Trick"]',
     snapTheDot: '[aria-label="Games"] [aria-label="Snap the dot"]',
     salute: '[aria-label="Games"] [aria-label="Salute!"]',
     karelTheLed: '[aria-label="Games"] [aria-label="Karel the LED"]',
-    crashyBird: '[aria-label="Games"] [aria-label="Crashy bird"]'
+    crashyBird: '[aria-label="Games"] [aria-label="Crashy bird"]',
+    seeMoreButton: '[aria-label="Games"] [aria-label="See more"]',
+
 }
 
 exports.radioGames = {
@@ -171,13 +179,12 @@ exports.radioGames = {
     rockPaperScissorsTeams:'[aria-label="Radio Games"] [aria-label="Rock Paper Scissors Teams"]',
     microCoin:'[aria-label="Radio Games"] [aria-label="Micro:Coin"]',
     infection:'[aria-label="Radio Games"] [aria-label="Infection"]',
-    bestFriends:'[aria-label="Radio Games"] [aria-label="Best Friends"]'
+    bestFriends:'[aria-label="Radio Games"] [aria-label="Best Friends"]',
 }
     
 exports.fashion = {
     ductTapeWallet:'[aria-label="Fashion"] [aria-label="Duct Tape Wallet"]',
     watch: '[aria-label="Fashion"] [aria-label="Watch"]',
-    stopWatch:'[aria-label="Fashion"] [aria-label="Stopwatch"]',
     stepCounter:'[aria-label="Fashion"] [aria-label="Step counter"]',
     ductTapeWatch:'[aria-label="Fashion"] [aria-label="Duct Tape Watch"]',
     nameBadge:'[aria-label="Fashion"] [aria-label="Name badge"]'
@@ -196,7 +203,7 @@ exports.toys = {
     milkMonster:'[aria-label="Toys"] [aria-label="Milky Monster"]',
     railwayCrossing:'[aria-label="Toys"] [aria-label="Railway Crossing"]',
     kitronikRCCarHack:'[aria-label="Toys"] [aria-label="Kitronik RC Car Hack"]',
-    rotaryDialRadio:'[aria-label="Toys"] [aria-label="Rotary Dial Radio"]'
+    rotaryDialRadio:'[aria-label="Toys"] [aria-label="Rotary Dial Radio"]',
 }
 
 exports.science = {
@@ -207,12 +214,16 @@ exports.science = {
 }
 
 exports.tools = {
+    stopWatch:'[aria-label="Tools"] [aria-label="Stopwatch"]',
+    level:'[aria-label="Tools"] [aria-label="Level"]',
     plotAcceleration:'[aria-label="Tools"] [aria-label="Plot Acceleration"]',
     lightLevelMeter:'[aria-label="Tools"] [aria-label="Light Level Meter"]',
     analogPinTester:'[aria-label="Tools"] [aria-label="Analog Pin Tester"]',
     servoCalibrator:'[aria-label="Tools"] [aria-label="Servo Calibrator"]',
     radioBridge:'[aria-label="Tools"] [aria-label="Radio Bridge"]',
-    openExample:'.card-action'
+    openExample:'.card-action',
+    seeMoreButton:'[aria-label="Tools"] [aria-label="See more"]'
+
 }
 
 exports.turtle = {
@@ -254,7 +265,7 @@ exports.courses = {
     pageTitleOfNetwork:'h1',
     maintitleOfSparkFun:'.main-title h1',
     titleOfKitronik:'.page-title h1',
-    courseTitle:'.course-title'
+    courseTitle:'.course-title',
 }
 exports.behindTheMakeCodeHardware ={
     leds:'[aria-label="Behind the MakeCode Hardware"] [aria-label="LEDs"]',
@@ -267,7 +278,9 @@ exports.behindTheMakeCodeHardware ={
     servoMotor:'[aria-label="Behind the MakeCode Hardware"] [aria-label="Servo Motor"]',
     speakers:'[aria-label="Behind the MakeCode Hardware"] [aria-label="Speakers"]',
     playVideo:'[title="Open link in new window"]',
-    videoTitle:'h1 .style-scope.ytd-video-primary-info-renderer'
+    videoTitle:'h1 .style-scope.ytd-video-primary-info-renderer',
+    seeMoreButton:'[aria-label="Behind the MakeCode Hardware"] [aria-label="See more"]',
+
 }
 exports.importProject = {
     importButton: '[title="Import a project"]',
@@ -288,6 +301,8 @@ exports.codingCards={
     shakeTheBottle:'[aria-label="Coding Cards"] [aria-label="Shake the Bottle"]',
     spriteBasedGames:'[aria-label="Coding Cards"] [aria-label="Sprite Based Games"]',
     zen:'[aria-label="Coding Cards"] [aria-label="Zen"]',
+    seeMoreButton:'[aria-label="Coding Cards"] [aria-label="See more"]',
+
 }
 exports.scienceExperiments = {
     dataCollection:'[aria-label="Science Experiments"] [aria-label="Data Collection"]',
@@ -299,10 +314,12 @@ exports.scienceExperiments = {
     batteryTester:'[aria-label="Science Experiments"] [aria-label="Battery Tester"]',
     rocketAcceleration:'[aria-label="Science Experiments"] [aria-label="Rocket Acceleration"]',
     playVideo:'[title="Open link in new window"]',
-    videoTitle:'h1 .style-scope.ytd-video-primary-info-renderer'
+    videoTitle:'h1 .style-scope.ytd-video-primary-info-renderer',
+    seeMoreButton:'[aria-label="Science Experiments"] [aria-label="See more"]',
+
 }
 exports.commonActions = {
-    startTutorial: '.actions button',
+    startTutorial: '.blocks button',
     showInstructions:'.card-action',
     playButton: '.video',
     videoPlay: '[aria-label="Play"]',
@@ -318,8 +335,6 @@ exports.commonActions = {
     microbitLogo: '[aria-label="micro:bit Logo"]',
     prograss: '[aria-label="My Projects"] .carouselitem:nth-child(2)',
     projectName: '#fileNameInput2',
-    seeMoreOfTutorials: '[aria-label="Tutorials"] [aria-label="See more"]',
-    seeMoreOfGames: '[aria-label="Games"] [aria-label="See more"]',
     idOfIframe: '#sidedocsframe',
     getStartButton:'.docbutton',
     openInNewTab:'#sidedocsbar',

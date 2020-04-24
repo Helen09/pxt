@@ -17,7 +17,7 @@ class AnalogPinTester extends DomObject {
         console.debug(`The header of the sidedocs is "${headerTitle}"`);
 
         await this.switchToDefaultFrame();
-        await this.click(commonActions.microbitLogo);
+        await this.click(commonActions.microbitLogo, tools.seeMoreButton);
 
     }
 

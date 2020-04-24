@@ -1,22 +1,22 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { tutorials, commonActions} = require('../lib/css-value');
+let { games, commonActions } = require('../lib/css-value');
 
-class MicroChat extends DomObject {
+class SevenSeconds extends DomObject {
 
-    async microChat() {
+    async sevenSeconds() {
 
-        console.log('Start test microChat()');
-        
-        await this.click(tutorials.microChat, commonActions.startTutorial);
+        console.log('Start test sevenSeconds()');
+
+        await this.click(games.sevenSecounds, commonActions.startTutorial);
 
         let headerTitle = await this.getText(commonActions.headerTitle);
-        assert.equal(headerTitle, 'Micro Chat');
+        assert.equal(headerTitle, '7 seconds game');
         console.debug(`The title of the current window is "${headerTitle}"`);
-
+    
         await this.click(commonActions.okButton);
 
-        for (let i = 1; i < 6; i++) {
+        for (let i = 1; i < 7; i++) {
 
             await this.click(commonActions.goNextButton);
             let cssValueOfSelectLabel = await this.getAttribute(commonActions.selectedLabel, 'class');
@@ -27,7 +27,7 @@ class MicroChat extends DomObject {
         await this.click(commonActions.finishButton);
 
         let projectName = await this.getAttribute(commonActions.projectName, 'value');
-        assert.equal(projectName, 'Micro Chat');
+        assert.equal(projectName, '7 seconds');
         console.debug(`The current project name is "${projectName}"`);
 
         await this.click(commonActions.microbitLogo);
@@ -35,10 +35,10 @@ class MicroChat extends DomObject {
     }
 
     test() {
-        it('Start learning the Micro Chat', async () => {
-            return await this.microChat();
+        it('Start learning the 7 Seconds', async () => {
+            return await this.sevenSeconds();
         });
     }
 
 }
-export let microChat = new MicroChat();
+export let sevenSeconds = new SevenSeconds();
