@@ -32,9 +32,6 @@ class Dice extends DomObject {
             let cssValueOfSelectLabel = await this.getAttribute(commonActions.selectedLabel, 'class');
             assert.equal(cssValueOfSelectLabel, 'ui circular label blue selected ');
 
-            let selectLabel = await this.getAttribute(commonActions.selectedLabel, 'aria-label');
-            console.log(selectLabel);
-
             if(i==5){
                 let target = await this.getRect(tutorials.foreverBlock);
 
@@ -53,7 +50,7 @@ class Dice extends DomObject {
         assert.equal(projectName, 'Dice');
         console.debug(`The current project name is "${projectName}"`);
     
-        await this.click(commonActions.microbitLogo, commonActions.seeMoreOfTutorials);
+        await this.click(commonActions.microbitLogo, tutorials.seeMoreButton);
 
     }
 

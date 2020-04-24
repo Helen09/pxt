@@ -1,4 +1,4 @@
-import { By } from 'selenium-webdriver';
+import { By, until} from 'selenium-webdriver';
 import fs from 'fs';
 import util from 'util';
 const screenshotsFolder = './screenshots';
@@ -11,6 +11,11 @@ export class DomObject {
         
     }
 
+    async moveToElementAndClick(criteria){
+        const actions = driver.actions();
+        let element = await this.waitforElementLocated(criteria);
+        return actions.mouseMove(element).click().perform();
+    }
     async getCurrentUrl(){
         return await driver.getCurrentUrl();
     }

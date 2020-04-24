@@ -23,8 +23,6 @@ class Square extends DomObject {
             let cssValueOfSelectLabel = await this.getAttribute(commonActions.selectedLabel, 'class');
             assert.equal(cssValueOfSelectLabel, 'ui circular label blue selected ');
 
-            let selectLabel = await this.getAttribute(commonActions.selectedLabel, 'aria-label');
-            console.log(selectLabel);
         }
 
         await this.click(commonActions.finishButton);

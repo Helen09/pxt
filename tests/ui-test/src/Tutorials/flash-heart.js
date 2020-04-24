@@ -31,9 +31,6 @@ class FlashingHeart extends DomObject {
             let cssValueOfSelectLabel = await this.getAttribute(commonActions.selectedLabel, 'class');
             assert.equal(cssValueOfSelectLabel, 'ui circular label blue selected ');
 
-            let selectLabel = await this.getAttribute(commonActions.selectedLabel, 'aria-label');
-            console.log(selectLabel);
-
             if(i==3){
                 await this.click(tutorials.basicBlocks);
 

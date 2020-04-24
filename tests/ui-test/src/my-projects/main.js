@@ -16,7 +16,11 @@ import { loveMeter } from "../tutorials/love-meter";
 import { microChat } from "../tutorials/micro-chat";
 import { rockPaperScissors } from "../games/rock-paper-scissors";
 import { coinFlipper } from "../games/coin-flipper";
+import { sevenSeconds } from "../games/7seconds";
+import { hotPotato } from "../games/hot-potato";
+import { headsGuess } from "../games/heads-guess";
 import { reactionTime } from "../games/reaction-time";
+import { tugOfLED } from "../games/tug-of-led";
 import { magicButtonTrick } from "../games/magic-button-trick";
 import { snapTheDot } from "../games/snap-the-dot";
 import { salute } from "../games/salute";
@@ -35,7 +39,6 @@ import { infection } from "../radio-games/infection";
 import { bestFriends } from "../radio-games/best-friends";
 import { ductTapeWallet } from "../fashion/duct-tape-wallet";
 import { watch } from "../fashion/watch";
-import { stopWatch } from "../fashion/stop-watch";
 import { stepCounter } from "../fashion/step-counter";
 import { ductTapeWatch } from "../fashion/duct-tape-watch";
 import { nameBadge } from "../fashion/name-badge";
@@ -53,6 +56,8 @@ import { timingGates } from "../science/timing-gates";
 import { soilMoisture } from "../science/soil-moisture";
 import { plantWatering } from "../science/plant-watering";
 import { statesOfMatter } from "../science/states-of-matter";
+import { stopWatch } from "../tools/stop-watch";
+import { level } from "../tools/level";
 import { plotAcceleration } from "../tools/plot-acceleration";
 import { lightLevelMeter } from "../tools/light-level-meter";
 import { analogPinTester } from "../tools/analog-pin-tester";
@@ -117,7 +122,7 @@ describe('Micro:bit Test', function () {
     });
 
     importMyProject.test();
-    //viewProjects.test(); In coding...
+    viewProjects.test(); //In coding...
     newProjectPage.test();
     shareProject.test();
     toggleDisplayForm.test();
@@ -133,7 +138,11 @@ describe('Micro:bit Test', function () {
     microChat.test();
     rockPaperScissors.test();
     coinFlipper.test();
+    sevenSeconds.test();
+    hotPotato.test();
+    headsGuess.test();
     reactionTime.test();
+    tugOfLED.test();
     magicButtonTrick.test();
     snapTheDot.test();
     salute.test();
@@ -152,7 +161,6 @@ describe('Micro:bit Test', function () {
     bestFriends.test();
     ductTapeWallet.test();
     watch.test();
-    stopWatch.test();
     stepCounter.test();
     ductTapeWatch.test();
     nameBadge.test();
@@ -170,6 +178,8 @@ describe('Micro:bit Test', function () {
     soilMoisture.test();
     plantWatering.test();
     statesOfMatter.test();
+    stopWatch.test();
+    level.test();
     plotAcceleration.test();
     lightLevelMeter.test();
     analogPinTester.test();

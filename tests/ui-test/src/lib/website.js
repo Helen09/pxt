@@ -1,5 +1,4 @@
-import { Builder, until } from 'selenium-webdriver';
-import { chrome } from 'selenium-webdriver/chrome';
+import { Builder} from 'selenium-webdriver';
 
 
 const WEBSITE_URL = "https://makecode.microbit.org"
@@ -38,7 +37,5 @@ class Website {
 global.driver = new Builder()
     .forBrowser('chrome')
     .build();
-global.until = until;
-
 
 export let website = new Website();
