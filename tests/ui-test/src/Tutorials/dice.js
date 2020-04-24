@@ -50,7 +50,7 @@ class Dice extends DomObject {
         assert.equal(projectName, 'Dice');
         console.debug(`The current project name is "${projectName}"`);
     
-        await this.click(commonActions.microbitLogo, commonActions.seeMoreOfTutorials);
+        await this.click(commonActions.microbitLogo, tutorials.seeMoreButton);
 
     }
 
