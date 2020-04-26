@@ -30,7 +30,7 @@ class HotPotato extends DomObject {
         assert.equal(projectName, 'Hot Potato');
         console.debug(`The current project name is "${projectName}"`);
 
-        await this.click(commonActions.microbitLogo);
+        await this.click(commonActions.microbitLogo, games.seeMoreButton);
 
     }
 

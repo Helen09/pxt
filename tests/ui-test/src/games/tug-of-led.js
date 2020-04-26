@@ -30,7 +30,7 @@ class TugOfLED extends DomObject {
         assert.equal(projectName, 'Tug-Of-LED');
         console.debug(`The current project name is "${projectName}"`);
 
-        await this.click(commonActions.microbitLogo);
+        await this.click(commonActions.microbitLogo, games.seeMoreButton);
 
     }
 

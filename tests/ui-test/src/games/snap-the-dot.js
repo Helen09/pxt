@@ -30,7 +30,7 @@ class SnapTheDot extends DomObject {
         assert.equal(projectName, 'Snap the dot');
         console.debug(`The current project name is "${projectName}"`);
         
-        await this.click(commonActions.microbitLogo, commonActions.seeMoreOfGames);
+        await this.click(commonActions.microbitLogo, games.seeMoreButton, games.seeMoreButton);
 
     }
 

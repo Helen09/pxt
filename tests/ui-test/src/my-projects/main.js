@@ -122,7 +122,7 @@ describe('Micro:bit Test', function () {
     });
 
     importMyProject.test();
-    viewProjects.test(); //In coding...
+    viewProjects.test(); 
     newProjectPage.test();
     shareProject.test();
     toggleDisplayForm.test();
