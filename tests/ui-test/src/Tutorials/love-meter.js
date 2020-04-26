@@ -1,6 +1,5 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-import { games } from '../lib/css-value';
 let { tutorials, commonActions } = require('../lib/css-value');
 
 class LoveMeter extends DomObject {
@@ -31,7 +30,7 @@ class LoveMeter extends DomObject {
         assert.equal(projectName, 'Love Meter');
         console.debug(`The current project name is "${projectName}"`);
 
-        await this.click(commonActions.microbitLogo, games.seeMoreButton);
+        await this.click(commonActions.microbitLogo, tutorials.seeMoreButton);
 
     }
 
