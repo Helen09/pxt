@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { blocksToJavaScript, commonActions } = require('../lib/css-value');
+import { blocksToJavaScript, commonActions } from '../lib/css-value';
 
 class CommandResponder extends DomObject {
 

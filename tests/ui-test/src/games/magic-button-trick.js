@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { games, commonActions } = require('../lib/css-value');
+import { games, commonActions } from '../lib/css-value';
 
 class MagicButtonTrick extends DomObject {
 

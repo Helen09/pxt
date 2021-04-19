@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { toys, commonActions } = require('../lib/css-value');
+import { toys, commonActions } from '../lib/css-value';
 
 class RailwayCrossing extends DomObject {
 

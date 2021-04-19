@@ -1,7 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { codingCards, commonActions} = require('../lib/css-value');
-
+import { codingCards, commonActions} from '../lib/css-value';
 class ShakeTheBottle extends DomObject {
 
     async shakeTheBottle() {

@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { turtle, commonActions } = require('../lib/css-value');
+import { turtle, commonActions } from '../lib/css-value';
 
 class Spiral extends DomObject {
 

@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { music, commonActions } = require('../lib/css-value');
+import { music, commonActions } from '../lib/css-value';
 
 class HackYourHeadphones extends DomObject {
 

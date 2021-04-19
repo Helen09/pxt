@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { tutorials, commonActions } = require('../lib/css-value');
+import { tutorials, commonActions } from '../lib/css-value';
 
 class FlashingHeart extends DomObject {
 

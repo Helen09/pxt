@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { switchButton } = require('../lib/css-value');
+import { switchButton } from '../lib/css-value';
 
 class ToggleDisplayForm extends DomObject {
 

@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { radioGames, commonActions } = require('../lib/css-value');
+import { radioGames, commonActions }from '../lib/css-value';
 
 class TelePotato extends DomObject {
 

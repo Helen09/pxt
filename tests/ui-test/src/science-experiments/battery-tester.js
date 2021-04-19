@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { scienceExperiments} = require('../lib/css-value');
+import { scienceExperiments} from '../lib/css-value';
 
 class BatteryTester extends DomObject {
 

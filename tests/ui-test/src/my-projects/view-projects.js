@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { newProject } = require('../lib/css-value');
+import { newProject } from '../lib/css-value';
 
 class ViewProjects extends DomObject {
     async viewProjects() {

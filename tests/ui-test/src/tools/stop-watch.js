@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { tools, commonActions } = require('../lib/css-value');
+import { tools, commonActions } from '../lib/css-value';
 
 class StopWatch extends DomObject {
 

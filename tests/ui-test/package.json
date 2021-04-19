@@ -6,7 +6,6 @@
   "scripts": {
     "test": "node_modules/.bin/mocha ./src/my-projects/index.js --require @babel/register --require @babel/polyfill --reporter mochawesome --timeout 100000"
   },
-  "type": "module",
   "author": "Helen Ma",
   "license": "MIT",
   "dependencies": {
@@ -20,7 +19,7 @@
     "@babel/polyfill": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-es2015": "^7.0.0-beta.53",
-    "@babel/register": "^7.8.6",
+    "@babel/register": "^7.13.14",
     "mocha": "^6.1.4",
     "mochawesome": "^6.1.0"
   }

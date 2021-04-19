@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { fashion, commonActions } = require('../lib/css-value');
+import { fashion, commonActions } from '../lib/css-value';
 
 class NameBadge extends DomObject {
 

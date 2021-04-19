@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { dragBlocks, commonActions } = require('../lib/css-value');
+import { dragBlocks, commonActions } from '../lib/css-value';
 
 class BlocklyToolBox extends DomObject {
 

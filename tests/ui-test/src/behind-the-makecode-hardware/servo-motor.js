@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { behindTheMakeCodeHardware} = require('../lib/css-value');
+import { behindTheMakeCodeHardware} from '../lib/css-value';
 
 class ServoMotor extends DomObject {
 

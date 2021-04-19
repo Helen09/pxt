@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from 'assert';
-let {importProject, commonActions} = require('../lib/css-value');
+import {importProject, commonActions} from '../lib/css-value';
 
 
 class ImportMyProject extends DomObject{

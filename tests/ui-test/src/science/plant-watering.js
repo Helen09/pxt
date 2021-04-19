@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { science, commonActions } = require('../lib/css-value');
+import { science, commonActions } from '../lib/css-value';
 
 class PlantWatering extends DomObject {
 

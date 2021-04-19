@@ -1,6 +1,6 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
-let { courses, commonActions } = require('../lib/css-value');
+import { courses, commonActions } from '../lib/css-value';
 
 class LearnAllAboutMicrobit extends DomObject {
 
