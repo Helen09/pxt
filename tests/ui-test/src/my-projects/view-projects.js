@@ -1,7 +1,7 @@
 import { DomObject } from '../lib/dom-object';
 import assert from "assert";
 import { newProject } from '../lib/css-value';
-
+import { commonclass } from '../lib/common-class';
 class ViewProjects extends DomObject {
     async viewProjects() {
 
@@ -12,34 +12,27 @@ class ViewProjects extends DomObject {
         assert.equal(tips, "Go back to create a new project");
         console.log(`Nothing in My Projects : ${tips}`);
 
-        await this.click(newProject.goBackButton, newProject.newProjectButton);
+        await this.click(newProject.goBackButton);
 
-        await this.sendKeys(newProject.projectName, 'Project1');
+        await commonclass.createProject('Project1');
+        await commonclass.createProject('Project2');
+        await commonclass.createProject('Project3');
+        
 
-        await this.click(newProject.saveButtonOfHomePage, newProject.homeOfProject, newProject.newProjectButton);
-
-        await this.sendKeys(newProject.projectName, 'Project2');
-
-        await this.click(newProject.saveButtonOfHomePage, newProject.homeOfProject, newProject.newProjectButton);
-
-        await this.sendKeys(newProject.projectName, 'Project3');
-
-        await this.click(newProject.saveButtonOfHomePage, newProject.homeOfProject, newProject.viewAllButton);
-
-        await this.click(newProject.turnToListView);
+        await this.click(newProject.viewAllButton, newProject.turnToListView);
 
         await this.catchScreenShot('ListViewOfMyProject');
 
         await this.click(newProject.sortByName);
-
+        
         let firstProjectName = await this.getText(newProject.firstProjectName);
-        assert.equal(firstProjectName, 'Project3');
+        assert.equal(firstProjectName, 'Project1');
         console.log(`The first project name is :${firstProjectName}`);
 
         await this.click(newProject.sortByModify);
 
         let firstProjectNameAfterSort = await this.getText(newProject.firstProjectName);
-        assert.equal(firstProjectNameAfterSort, 'Project1');
+        assert.equal(firstProjectNameAfterSort, 'Project3');
         console.log(`The first project name after sort is :${firstProjectNameAfterSort}`);
 
         await this.sendKeys(newProject.searchBox, '1');

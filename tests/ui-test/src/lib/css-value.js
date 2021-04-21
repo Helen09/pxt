@@ -26,7 +26,7 @@ exports.newProject = {
     turnToListView:'[title="List view"]',
     turnToGridView:'[title="Grid view"]',
     sortByName:'[title="Sort by Name descending"]',
-    sortByModify:'[title="Sort by Last Modified descending"]',
+    sortByModify:'[title="Sort by Last Modified ascending"]',
     selectAllProjects:'th[title="Select all projects"]',
     selectProjects:'.collapsing',
     firstProjectName:'tr:nth-child(1) td:nth-child(2)',

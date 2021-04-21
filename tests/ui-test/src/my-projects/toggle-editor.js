@@ -18,7 +18,6 @@ class ToggleDisplayForm extends DomObject {
 
         await this.click(switchButton.dropDownMenu, switchButton.switchToPython);
 
-        await driver.sleep(2000);
         let firstLineOfPython = await this.getText(switchButton.pythonSrc1);
         assert.equal(firstLineOfPython, 'def');
         console.log(`The first line of python script is :${firstLineOfPython}`);
